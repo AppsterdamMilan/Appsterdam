@@ -11,6 +11,8 @@
 #endif
 
 #ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#define MEETUP_APIK @"8d241968678255d3913d116f7245"
 #endif
