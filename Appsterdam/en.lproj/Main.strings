@@ -1,0 +1,27 @@
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "8JZ-ec-txt"; */
+"8JZ-ec-txt.text" = "Subtitle";
+
+/* Class = "IBUIViewController"; title = "First"; ObjectID = "CZ4-MO-1fc"; */
+"CZ4-MO-1fc.title" = "First";
+
+/* Class = "IBUIBarButtonItem"; title = "Valuta"; ObjectID = "DS4-4T-zfu"; */
+"DS4-4T-zfu.title" = "Valuta";
+
+/* Class = "IBUITabBarItem"; title = "Item"; ObjectID = "jTm-F4-Rgz"; */
+"jTm-F4-Rgz.title" = "Item";
+
+/* Class = "IBUINavigationItem"; title = "WeeklyBeer"; ObjectID = "kr4-ji-tL6"; */
+"kr4-ji-tL6.title" = "WeeklyBeer";
+
+/* Class = "IBUIButton"; normalTitle = "Come raggiungerci"; ObjectID = "mg1-MS-pfl"; */
+"mg1-MS-pfl.normalTitle" = "Come raggiungerci";
+
+/* Class = "IBUITextView"; text = "Loaded by the first view controller — an instance of APPFirstViewController — specified in the app delegate."; ObjectID = "tZ3-Hv-Q7E"; */
+"tZ3-Hv-Q7E.text" = "Loaded by the first view controller — an instance of APPFirstViewController — specified in the app delegate.";
+
+/* Class = "IBUITabBarItem"; title = "First"; ObjectID = "u1e-5L-l1D"; */
+"u1e-5L-l1D.title" = "First";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "zzs-kD-ZdO"; */
+"zzs-kD-ZdO.text" = "Title";
