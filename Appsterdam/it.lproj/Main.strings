@@ -2,10 +2,10 @@
 "CZ4-MO-1fc.title" = "Prima";
 
 /* Class = "IBUILabel"; text = "First View"; ObjectID = "Zhg-ve-WU7"; */
-"Zhg-ve-WU7.text" = "Benvenuti in AppsterdamMilan";
+"1Nb-WR-u7h.text" = "L'applicazione ufficiale!";
 
 /* Class = "IBUITextView"; text = "Loaded by the first view controller — an instance of APPFirstViewController — specified in the app delegate."; ObjectID = "tZ3-Hv-Q7E"; */
-"tZ3-Hv-Q7E.text" = "Loaded by the first view controller — an instance of APPFirstViewController — specified in the app delegate.";
+"tZ3-Hv-Q7E.text" = "aaaaaa";
 
 /* Class = "IBUITabBarItem"; title = "First"; ObjectID = "u1e-5L-l1D"; */
 "u1e-5L-l1D.title" = "Home";
@@ -13,3 +13,11 @@
 "jTm-F4-Rgz.title" = "WeeklyBeer";
 
 "DS4-4T-zfu.title" =  "Valuta";
+
+"mg1-MS-pfl.title" =  "Come raggiungerci";
+
+"glz-YY-evX.text" = "Un esperimento Open Source della community di Appsterdam Milan. Controlla gli eventi in programma e valutali!";
+
+"REc-yM-5lh.title" = "TalkLab";
+
+"EV8-bu-TbQ.title" = "Workshop";

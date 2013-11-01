@@ -38,6 +38,7 @@
     [mapView setScrollEnabled:YES];
     [mapView setRotateEnabled:YES];
     mapView.delegate = self;
+    mapView.tintColor = [UIColor redColor];
     // LocationManager
 	_locationManager = [[CLLocationManager alloc]init];
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;

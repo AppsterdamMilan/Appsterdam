@@ -19,7 +19,6 @@
 		BEAA7D3D180F4B8500276AA0 /* APPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */; };
 		BEAA7D40180F4B8500276AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D3E180F4B8500276AA0 /* Main.storyboard */; };
 		BEAA7D43180F4B8500276AA0 /* APPFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D42180F4B8500276AA0 /* APPFirstViewController.m */; };
-		BEAA7D46180F4B8500276AA0 /* APPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D45180F4B8500276AA0 /* APPSecondViewController.m */; };
 		BEAA7D48180F4B8500276AA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D47180F4B8500276AA0 /* Images.xcassets */; };
 		BEAA7D4F180F4B8500276AA0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D4E180F4B8500276AA0 /* XCTest.framework */; };
 		BEAA7D50180F4B8500276AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2C180F4B8500276AA0 /* Foundation.framework */; };
@@ -53,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE186CBD182430B6009AA87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		BE9964651824071800A9652C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BE99646D18240A4E00A9652C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BE99646F18240A5400A9652C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -71,8 +71,6 @@
 		BEAA7D3F180F4B8500276AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEAA7D41180F4B8500276AA0 /* APPFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPFirstViewController.h; sourceTree = "<group>"; };
 		BEAA7D42180F4B8500276AA0 /* APPFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPFirstViewController.m; sourceTree = "<group>"; };
-		BEAA7D44180F4B8500276AA0 /* APPSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPSecondViewController.h; sourceTree = "<group>"; };
-		BEAA7D45180F4B8500276AA0 /* APPSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPSecondViewController.m; sourceTree = "<group>"; };
 		BEAA7D47180F4B8500276AA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BEAA7D4D180F4B8500276AA0 /* AppsterdamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsterdamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA7D4E180F4B8500276AA0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -182,8 +180,6 @@
 				BEAA7D3E180F4B8500276AA0 /* Main.storyboard */,
 				BEAA7D41180F4B8500276AA0 /* APPFirstViewController.h */,
 				BEAA7D42180F4B8500276AA0 /* APPFirstViewController.m */,
-				BEAA7D44180F4B8500276AA0 /* APPSecondViewController.h */,
-				BEAA7D45180F4B8500276AA0 /* APPSecondViewController.m */,
 				BEAA7D47180F4B8500276AA0 /* Images.xcassets */,
 				BEAA7D33180F4B8500276AA0 /* Supporting Files */,
 				BEAD2318180FCE4D0023E7BB /* Classes */,
@@ -371,7 +367,6 @@
 				BEAA7D79180F50FF00276AA0 /* AFHTTPRequestOperation.m in Sources */,
 				BEAA7D78180F50FF00276AA0 /* AFHTTPClient.m in Sources */,
 				BEAA7D7F180F50FF00276AA0 /* AFXMLRequestOperation.m in Sources */,
-				BEAA7D46180F4B8500276AA0 /* APPSecondViewController.m in Sources */,
 				BEAA7D86180F53C700276AA0 /* APPMeeUpCommunicator.m in Sources */,
 				BEAD231E180FCFE10023E7BB /* APPEventsViewController.m in Sources */,
 				BEAD2321180FD1CD0023E7BB /* APPWeeklyBeer.m in Sources */,
@@ -419,6 +414,7 @@
 			children = (
 				BEAA7D3F180F4B8500276AA0 /* Base */,
 				BEAA7D81180F52FE00276AA0 /* it */,
+				BE186CBD182430B6009AA87E /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -468,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -501,7 +497,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -519,6 +515,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Appsterdam/Appsterdam-Prefix.pch";
 				INFOPLIST_FILE = "Appsterdam/Appsterdam-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -536,6 +533,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Appsterdam/Appsterdam-Prefix.pch";
 				INFOPLIST_FILE = "Appsterdam/Appsterdam-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
