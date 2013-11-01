@@ -13,7 +13,9 @@
 @property (nonatomic, strong) NSDictionary *eventData;
 @property (nonatomic, weak) IBOutlet UIWebView *descriptionWV;
 @property (nonatomic, weak) IBOutlet UIButton *directionBtn;
+@property (nonatomic, strong) NSString *veespoToken;
 
 - (IBAction)openMapViewController:(id)sender;
+- (IBAction)openVeespo:(id)sender;
 
 @end

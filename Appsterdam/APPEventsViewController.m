@@ -60,7 +60,15 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    // Conversione del timestamp passato da meetup
+    NSDate *eventDate = [NSDate dateWithTimeIntervalSince1970:([[_events objectAtIndex:indexPath.row][@"time"] doubleValue]) / 1000];
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat: @"dd/MM/yyyy HH:mm"]; // 2009-02-01 19:50
+    NSString *dateString = [dateFormat stringFromDate:eventDate];
+    
     cell.textLabel.text = [_events objectAtIndex:indexPath.row][@"name"];
+    cell.detailTextLabel.text = dateString;
     
     return cell;
 }

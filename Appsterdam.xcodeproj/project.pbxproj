@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE9964661824071800A9652C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9964651824071800A9652C /* AdSupport.framework */; };
+		BE99646E18240A4E00A9652C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646D18240A4E00A9652C /* SystemConfiguration.framework */; };
+		BE99647018240A5400A9652C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646F18240A5400A9652C /* QuartzCore.framework */; };
 		BEA1EB281812C11700C43889 /* APPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA1EB271812C11700C43889 /* APPEventViewController.m */; };
 		BEAA7D2D180F4B8500276AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2C180F4B8500276AA0 /* Foundation.framework */; };
 		BEAA7D2F180F4B8500276AA0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2E180F4B8500276AA0 /* CoreGraphics.framework */; };
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE9964651824071800A9652C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BE99646D18240A4E00A9652C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BE99646F18240A5400A9652C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BEA1EB261812C11700C43889 /* APPEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEventViewController.h; path = Classes/APPEventViewController.h; sourceTree = "<group>"; };
 		BEA1EB271812C11700C43889 /* APPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEventViewController.m; path = Classes/APPEventViewController.m; sourceTree = "<group>"; };
 		BEAA7D29180F4B8500276AA0 /* Appsterdam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsterdam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +118,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE99647018240A5400A9652C /* QuartzCore.framework in Frameworks */,
+				BE99646E18240A4E00A9652C /* SystemConfiguration.framework in Frameworks */,
+				BE9964661824071800A9652C /* AdSupport.framework in Frameworks */,
 				BEAA7D2F180F4B8500276AA0 /* CoreGraphics.framework in Frameworks */,
 				BEAA7D31180F4B8500276AA0 /* UIKit.framework in Frameworks */,
 				BEAA7D2D180F4B8500276AA0 /* Foundation.framework in Frameworks */,
@@ -153,6 +162,9 @@
 		BEAA7D2B180F4B8500276AA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE99646F18240A5400A9652C /* QuartzCore.framework */,
+				BE99646D18240A4E00A9652C /* SystemConfiguration.framework */,
+				BE9964651824071800A9652C /* AdSupport.framework */,
 				BEAA7D2C180F4B8500276AA0 /* Foundation.framework */,
 				BEAA7D2E180F4B8500276AA0 /* CoreGraphics.framework */,
 				BEAA7D30180F4B8500276AA0 /* UIKit.framework */,
@@ -500,6 +512,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/darth/Dropbox/Progetti/Appsterdam/VeespoFramework.embeddedframework,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Appsterdam/Appsterdam-Prefix.pch";
 				INFOPLIST_FILE = "Appsterdam/Appsterdam-Info.plist";
@@ -513,6 +529,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/darth/Dropbox/Progetti/Appsterdam/VeespoFramework.embeddedframework,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Appsterdam/Appsterdam-Prefix.pch";
 				INFOPLIST_FILE = "Appsterdam/Appsterdam-Info.plist";
