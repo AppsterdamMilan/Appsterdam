@@ -1,6 +1,6 @@
 Appsterdam
 ==========
 
-Appsterdam Milan Mobile Application
+Appsterdam Milan iOS Application
 
 **WORK IN PROGRESS**
