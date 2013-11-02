@@ -11,6 +11,7 @@
 
 #define GROUP_ID (@"3242342")
 #define PAGE (@"20")
+#define MEETUP_APIK @""
 
 static NSString *kResults = @"results";
 
@@ -25,6 +26,7 @@ static NSString *kResults = @"results";
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Errore di connessione, riprovare più tardi" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
+        result(nil);
     }];
     [operation start];
 }

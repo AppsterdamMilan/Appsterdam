@@ -1,24 +1,27 @@
 //
-//  APPWeeklyBeer.m
+//  APPTalkLab.m
 //  Appsterdam
 //
-//  Created by Alessio Roberto on 17/10/13.
+//  Created by Alessio Roberto on 02/11/13.
 //  Copyright (c) 2013 Alessio Roberto. All rights reserved.
 //
 
-#import "APPWeeklyBeer.h"
+#import "APPTalkLab.h"
 #import "APPEventsMangment.h"
 #import "APPEventViewController.h"
+#import <AdSupport/AdSupport.h>
+// Contact roberto@veespo.com to download VeespoFramework
+//#import <VeespoFramework/Veespo.h>
 
-@interface APPWeeklyBeer ()
+@interface APPTalkLab ()
 
 @end
 
-@implementation APPWeeklyBeer
+@implementation APPTalkLab
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -28,9 +31,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+	// Do any additional setup after loading the view.
+    
     APPEventsMangment *managment = [[APPEventsMangment alloc] init];
-    self.events = [managment getWeeklyBeerList];
+    self.events = [managment getTalkLabList];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,8 +54,7 @@
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     event.eventData = [self.events objectAtIndex:path.row];
     event.veespoToken = [[self.veespoTokens objectAtIndex:0] objectForKey:@"token"];
-//    NSLog(@"%@", event.eventData);
+    //    NSLog(@"%@", event.eventData);
 }
-
 
 @end

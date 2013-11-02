@@ -8,6 +8,9 @@
 
 #import "APPEventsViewController.h"
 #import "APPEventViewController.h"
+// Contact roberto@veespo.com to download VeespoFramework
+//#import <VeespoFramework/Veespo.h>
+#import <AdSupport/AdSupport.h>
 
 @interface APPEventsViewController ()
 
@@ -33,6 +36,33 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (self.veespoTokens == nil) {
+//        NSString *userid = [NSString stringWithFormat:@"AppsterdamMilan-%@", [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]];
+//        NSArray *languageArray = [NSLocale preferredLanguages];
+        
+        // Contact roberto@veespo.com to download VeespoFramework
+        /*
+        [Veespo initVeespo:@"apk-189a5479-ee70-4dbe-9acf-16ed04947fad"
+                    userId:userid
+                  userName:nil
+                  language:[languageArray objectAtIndex:0]
+                categories:@{
+                             @"categories":@[
+                                     @{@"cat": @"eventi"}
+                                     ]
+                             }
+                   testUrl:YES
+                    tokens:^(id responseData, BOOL error) {
+                        self.veespoTokens = [[NSArray alloc] initWithArray:[responseData objectForKey:@"tokens"]];
+                    }];
+         */
+    }
 }
 
 - (void)didReceiveMemoryWarning

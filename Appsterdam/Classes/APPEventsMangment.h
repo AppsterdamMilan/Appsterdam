@@ -18,4 +18,6 @@
 - (NSArray *)getTalkLabList;
 - (NSArray *)getWeeklyBeerList;
 - (NSArray *)getWorkShopList;
+- (NSArray *)getOthersEventList;
+
 @end

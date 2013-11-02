@@ -45,4 +45,9 @@
     return [[NSUserDefaults standardUserDefaults] objectForKey:@"workshop"];
 }
 
+- (NSArray *)getOthersEventList
+{
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"other"];
+}
+
 @end

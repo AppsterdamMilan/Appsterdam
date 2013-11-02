@@ -13,5 +13,7 @@
 @interface APPMapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocation *venueLocation;
+@property (nonatomic, strong) NSString *nameLocation;
+@property (nonatomic, strong) NSString *addressLocation;
 
 @end

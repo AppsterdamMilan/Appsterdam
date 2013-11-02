@@ -17,6 +17,7 @@ static NSString *talklab = @"Appsterdam TalkLab";
     NSMutableArray *talkLabLists;
     NSMutableArray *weeklyBeerLists;
     NSMutableArray *othersEventLists;
+    MBProgressHUD *HUD;
 }
 
 @end
@@ -27,28 +28,39 @@ static NSString *talklab = @"Appsterdam TalkLab";
 {
     [super viewDidLoad];
     
+    if (!HUD) {
+        HUD = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:HUD];
+        HUD.delegate = self;
+        [HUD show:YES];
+    }
+    
     [APPMeeUpCommunicator getEvents:^(NSArray *events) {
-        for (NSDictionary *event in events) {
-            if ([event[@"name"] isEqualToString:talklab]) {
-                if (talkLabLists == nil) {
-                    talkLabLists = [[NSMutableArray alloc] init];
+        if (events != nil) {
+            for (NSDictionary *event in events) {
+                if ([event[@"name"] isEqualToString:talklab]) {
+                    if (talkLabLists == nil) {
+                        talkLabLists = [[NSMutableArray alloc] init];
+                    }
+                    [talkLabLists addObject:event];
+                } else if ([event[@"name"] isEqualToString:weeklybeer]) {
+                    if (weeklyBeerLists == nil) {
+                        weeklyBeerLists = [[NSMutableArray alloc] init];
+                    }
+                    [weeklyBeerLists addObject:event];
+                } else {
+                    if (othersEventLists == nil) {
+                        othersEventLists = [[NSMutableArray alloc] init];
+                    }
+                    [othersEventLists addObject:event];
                 }
-                [talkLabLists addObject:event];
-            } else if ([event[@"name"] isEqualToString:weeklybeer]) {
-                if (weeklyBeerLists == nil) {
-                    weeklyBeerLists = [[NSMutableArray alloc] init];
-                }
-                [weeklyBeerLists addObject:event];
-            } else {
-                if (othersEventLists == nil) {
-                    othersEventLists = [[NSMutableArray alloc] init];
-                }
-                [othersEventLists addObject:event];
             }
+            APPEventsMangment *mangment = [[APPEventsMangment alloc] init];
+            [mangment setTalkLabList:talkLabLists];
+            [mangment setWeeklyBeerList:weeklyBeerLists];
+            [mangment setOthersEventList:othersEventLists];
         }
-        APPEventsMangment *mangment = [[APPEventsMangment alloc] init];
-        [mangment setTalkLabList:talkLabLists];
-        [mangment setWeeklyBeerList:weeklyBeerLists];
+        [HUD hide:YES];
     }];
 }
 
@@ -56,6 +68,14 @@ static NSString *talklab = @"Appsterdam TalkLab";
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MBProgressHUDDelegate methods
+
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+	// Remove HUD from screen when the HUD was hidded
+	[HUD removeFromSuperview];
+	HUD = nil;
 }
 
 @end
