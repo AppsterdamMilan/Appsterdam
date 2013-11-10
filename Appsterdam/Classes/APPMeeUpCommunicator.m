@@ -7,7 +7,7 @@
 //
 
 #import "APPMeeUpCommunicator.h"
-#import "AFNetworking.h"
+#import "AFJSONRequestOperation.h"
 
 #define GROUP_ID (@"3242342")
 #define PAGE (@"20")
