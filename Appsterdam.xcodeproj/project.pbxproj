@@ -35,7 +35,6 @@
 		BEAA7D51180F4B8500276AA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D30180F4B8500276AA0 /* UIKit.framework */; };
 		BEAA7D59180F4B8500276AA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D57180F4B8500276AA0 /* InfoPlist.strings */; };
 		BEAA7D5B180F4B8500276AA0 /* AppsterdamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D5A180F4B8500276AA0 /* AppsterdamTests.m */; };
-		BEAA7D86180F53C700276AA0 /* APPMeeUpCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D85180F53C700276AA0 /* APPMeeUpCommunicator.m */; };
 		BEAD231B180FCE6A0023E7BB /* APPEventsMangment.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAD231A180FCE6A0023E7BB /* APPEventsMangment.m */; };
 		BEAD231E180FCFE10023E7BB /* APPEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */; };
 		BEAD2321180FD1CD0023E7BB /* APPWeeklyBeer.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAD2320180FD1CD0023E7BB /* APPWeeklyBeer.m */; };
@@ -100,8 +99,6 @@
 		BEAA7D81180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		BEAA7D82180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEAA7D83180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BEAA7D84180F53C700276AA0 /* APPMeeUpCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPMeeUpCommunicator.h; path = Classes/APPMeeUpCommunicator.h; sourceTree = "<group>"; };
-		BEAA7D85180F53C700276AA0 /* APPMeeUpCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPMeeUpCommunicator.m; path = Classes/APPMeeUpCommunicator.m; sourceTree = "<group>"; };
 		BEAD2319180FCE6A0023E7BB /* APPEventsMangment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEventsMangment.h; path = Classes/APPEventsMangment.h; sourceTree = "<group>"; };
 		BEAD231A180FCE6A0023E7BB /* APPEventsMangment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEventsMangment.m; path = Classes/APPEventsMangment.m; sourceTree = "<group>"; };
 		BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPEventsViewController.h; sourceTree = "<group>"; };
@@ -264,8 +261,6 @@
 				4DF8D92D18345F5200D08356 /* Model */,
 				4DF8D926183451E500D08356 /* Meetup */,
 				BE9B25DF182554EA0093E2B4 /* Single Event */,
-				BEAA7D84180F53C700276AA0 /* APPMeeUpCommunicator.h */,
-				BEAA7D85180F53C700276AA0 /* APPMeeUpCommunicator.m */,
 				BEAD2319180FCE6A0023E7BB /* APPEventsMangment.h */,
 				BEAD231A180FCE6A0023E7BB /* APPEventsMangment.m */,
 				BEAD231F180FD1CD0023E7BB /* APPWeeklyBeer.h */,
@@ -413,7 +408,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAD231B180FCE6A0023E7BB /* APPEventsMangment.m in Sources */,
-				BEAA7D86180F53C700276AA0 /* APPMeeUpCommunicator.m in Sources */,
 				BEAD231E180FCFE10023E7BB /* APPEventsViewController.m in Sources */,
 				4DF8D93018345F8600D08356 /* APPEvent.m in Sources */,
 				4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */,
