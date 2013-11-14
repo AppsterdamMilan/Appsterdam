@@ -10,7 +10,4 @@
 
 @interface APPEventsViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *events;
-@property (nonatomic, strong) NSArray *veespoTokens;
-
 @end

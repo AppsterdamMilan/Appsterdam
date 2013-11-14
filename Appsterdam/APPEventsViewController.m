@@ -6,36 +6,25 @@
 //  Copyright (c) 2013 Alessio Roberto. All rights reserved.
 //
 
-#import "APPEventsViewController.h"
-#import "APPEventViewController.h"
 // Contact roberto@veespo.com to download VeespoFramework
 //#import <VeespoFramework/Veespo.h>
 #import <AdSupport/AdSupport.h>
+#import "APPEventsViewController.h"
+#import "APPEventViewController.h"
+#import "APPMeetupOperationManager.h"
+#import "SVProgressHUD.h"
 
 @interface APPEventsViewController ()
-
+@property (nonatomic, strong) NSArray *events;
+@property (nonatomic, strong) NSArray *veespoTokens;
 @end
 
 @implementation APPEventsViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self reloadEvents];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -73,35 +62,54 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return _events.count;
+    return [[self events] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Conversione del timestamp passato da meetup
-    NSDate *eventDate = [NSDate dateWithTimeIntervalSince1970:([[_events objectAtIndex:indexPath.row][@"time"] doubleValue]) / 1000];
-    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat: @"dd/MM/yyyy HH:mm"]; // 2009-02-01 19:50
-    NSString *dateString = [dateFormat stringFromDate:eventDate];
-    
-    cell.textLabel.text = [_events objectAtIndex:indexPath.row][@"name"];
-    cell.detailTextLabel.text = dateString;
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                            forIndexPath:indexPath];
+    APPEvent *event = self.events[indexPath.row];
+    cell.textLabel.text = event.name;
+    cell.detailTextLabel.text = [NSDateFormatter localizedStringFromDate:event.date
+                                                               dateStyle:NSDateFormatterShortStyle
+                                                               timeStyle:NSDateFormatterShortStyle];
     return cell;
 }
+
+#pragma mark - Events
+
+// Could be done better if not using storyboard.
+-(APPEventType)eventType
+{
+    APPEventType type = APPEventTypeOther;
+    if ([self.title isEqualToString:@"WeeklyBeer"]) {
+        type = APPEventTypeWeeklyBeer;
+    } else if ([self.title isEqualToString:@"TalkLab"]) {
+        type = APPEventTypeTalkLab;
+    }
+    return type;
+}
+
+-(void)reloadEvents
+{
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
+    [APPMeetupOperationManager getAppsterdamMilanEventsWithType:[self eventType]
+                                                     Completion:^(NSArray *events, NSError *error) {
+                                                         if (!error) {
+                                                             self.events = events;
+                                                             [self.tableView reloadData];
+                                                             [SVProgressHUD showSuccessWithStatus:nil];
+                                                         } else {
+                                                             [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+                                                         }
+                                                     }];
+}
+     
 
 #pragma mark - Navigation
 
