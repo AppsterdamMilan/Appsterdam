@@ -19,8 +19,6 @@
 		BE99647018240A5400A9652C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646F18240A5400A9652C /* QuartzCore.framework */; };
 		BE9B25E4182554EA0093E2B4 /* APPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */; };
 		BE9B25E5182554EA0093E2B4 /* APPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */; };
-		BE9B25EB182555620093E2B4 /* APPTalkLab.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25EA182555620093E2B4 /* APPTalkLab.m */; };
-		BE9B25EE18255B270093E2B4 /* APPOtherEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25ED18255B270093E2B4 /* APPOtherEvents.m */; };
 		BE9B25F1182567850093E2B4 /* APPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25F0182567840093E2B4 /* APPAnnotation.m */; };
 		BEAA7D2D180F4B8500276AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2C180F4B8500276AA0 /* Foundation.framework */; };
 		BEAA7D2F180F4B8500276AA0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2E180F4B8500276AA0 /* CoreGraphics.framework */; };
@@ -35,9 +33,7 @@
 		BEAA7D51180F4B8500276AA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D30180F4B8500276AA0 /* UIKit.framework */; };
 		BEAA7D59180F4B8500276AA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D57180F4B8500276AA0 /* InfoPlist.strings */; };
 		BEAA7D5B180F4B8500276AA0 /* AppsterdamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D5A180F4B8500276AA0 /* AppsterdamTests.m */; };
-		BEAD231B180FCE6A0023E7BB /* APPEventsMangment.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAD231A180FCE6A0023E7BB /* APPEventsMangment.m */; };
 		BEAD231E180FCFE10023E7BB /* APPEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */; };
-		BEAD2321180FD1CD0023E7BB /* APPWeeklyBeer.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAD2320180FD1CD0023E7BB /* APPWeeklyBeer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,10 +69,6 @@
 		BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPEventViewController.m; sourceTree = "<group>"; };
 		BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPMapViewController.h; sourceTree = "<group>"; };
 		BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPMapViewController.m; sourceTree = "<group>"; };
-		BE9B25E9182555620093E2B4 /* APPTalkLab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPTalkLab.h; path = Classes/APPTalkLab.h; sourceTree = "<group>"; };
-		BE9B25EA182555620093E2B4 /* APPTalkLab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPTalkLab.m; path = Classes/APPTalkLab.m; sourceTree = "<group>"; };
-		BE9B25EC18255B270093E2B4 /* APPOtherEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPOtherEvents.h; path = Classes/APPOtherEvents.h; sourceTree = "<group>"; };
-		BE9B25ED18255B270093E2B4 /* APPOtherEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPOtherEvents.m; path = Classes/APPOtherEvents.m; sourceTree = "<group>"; };
 		BE9B25EF182567840093E2B4 /* APPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPAnnotation.h; sourceTree = "<group>"; };
 		BE9B25F0182567840093E2B4 /* APPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPAnnotation.m; sourceTree = "<group>"; };
 		BEAA7D29180F4B8500276AA0 /* Appsterdam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsterdam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,12 +91,8 @@
 		BEAA7D81180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		BEAA7D82180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEAA7D83180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BEAD2319180FCE6A0023E7BB /* APPEventsMangment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEventsMangment.h; path = Classes/APPEventsMangment.h; sourceTree = "<group>"; };
-		BEAD231A180FCE6A0023E7BB /* APPEventsMangment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEventsMangment.m; path = Classes/APPEventsMangment.m; sourceTree = "<group>"; };
 		BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPEventsViewController.h; sourceTree = "<group>"; };
 		BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPEventsViewController.m; sourceTree = "<group>"; };
-		BEAD231F180FD1CD0023E7BB /* APPWeeklyBeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPWeeklyBeer.h; path = Classes/APPWeeklyBeer.h; sourceTree = "<group>"; };
-		BEAD2320180FD1CD0023E7BB /* APPWeeklyBeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPWeeklyBeer.m; path = Classes/APPWeeklyBeer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,14 +257,6 @@
 				4DF8D92D18345F5200D08356 /* Model */,
 				4DF8D926183451E500D08356 /* Meetup */,
 				BE9B25DF182554EA0093E2B4 /* Single Event */,
-				BEAD2319180FCE6A0023E7BB /* APPEventsMangment.h */,
-				BEAD231A180FCE6A0023E7BB /* APPEventsMangment.m */,
-				BEAD231F180FD1CD0023E7BB /* APPWeeklyBeer.h */,
-				BEAD2320180FD1CD0023E7BB /* APPWeeklyBeer.m */,
-				BE9B25E9182555620093E2B4 /* APPTalkLab.h */,
-				BE9B25EA182555620093E2B4 /* APPTalkLab.m */,
-				BE9B25EC18255B270093E2B4 /* APPOtherEvents.h */,
-				BE9B25ED18255B270093E2B4 /* APPOtherEvents.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -415,21 +395,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEAD231B180FCE6A0023E7BB /* APPEventsMangment.m in Sources */,
 				BEAD231E180FCFE10023E7BB /* APPEventsViewController.m in Sources */,
 				4DF8D93018345F8600D08356 /* APPEvent.m in Sources */,
 				4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */,
-				BEAD2321180FD1CD0023E7BB /* APPWeeklyBeer.m in Sources */,
 				BE9B25F1182567850093E2B4 /* APPAnnotation.m in Sources */,
 				4DF8D92C183451E500D08356 /* APPMeetupOperationManager.m in Sources */,
 				BEAA7D3D180F4B8500276AA0 /* APPAppDelegate.m in Sources */,
 				4DF8D9331834721000D08356 /* APPVenue.m in Sources */,
-				BE9B25EE18255B270093E2B4 /* APPOtherEvents.m in Sources */,
 				BE9B25E4182554EA0093E2B4 /* APPEventViewController.m in Sources */,
 				BEAA7D39180F4B8500276AA0 /* main.m in Sources */,
 				4DF8D9371834CF4900D08356 /* APPTabBarController.m in Sources */,
 				BE9B25E5182554EA0093E2B4 /* APPMapViewController.m in Sources */,
-				BE9B25EB182555620093E2B4 /* APPTalkLab.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
