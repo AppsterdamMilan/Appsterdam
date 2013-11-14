@@ -7,7 +7,6 @@
 //
 
 #import "APPMeetupOperationManager.h"
-#import "APPEvent.h"
 
 // Created with Mouhcine's account (We need to dig and see if we can have one for Appsterdam)
 static NSString * const APPMeetupKey = @"ihjgomeoh5hu7rqcuplge9ik9";
@@ -54,6 +53,17 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
                                completion(nil, error);
                            }
                        }];
+}
+
++(void)getAppsterdamMilanEventsWithType:(APPEventType)type
+                             Completion:(APPMeetupEventsHandler)completion
+{
+    [self getAppsterdamMilanEventsWithCompletion:^(NSArray *events, NSError *error) {
+        if (completion) {
+            NSPredicate *eventTypePredicate = [NSPredicate predicateWithFormat:@"%K like %@", @"type", @(type)];
+            completion([events filteredArrayUsingPredicate:eventTypePredicate], error);
+        }
+    }];
 }
 
 #pragma mark - OAuth2

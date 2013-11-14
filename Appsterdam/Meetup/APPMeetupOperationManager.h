@@ -8,6 +8,7 @@
 
 #import "AFNetworking.h"
 #import "APPOAuthWebViewController.h"
+#import "APPEvent.h"
 
 /**
  *  A block object to be executed when the request operation finishes.
@@ -52,5 +53,14 @@ typedef void (^APPMeetupEventsHandler) (NSArray *events, NSError *error);
  *  @param completion A block to be executed when the request finishes.
  */
 +(void)getAppsterdamMilanEventsWithCompletion:(APPMeetupEventsHandler)completion;
+
+/**
+ *  Makes a request for events of a certain type scheduled in Appsterdam Milan Meetup group.
+ *
+ *  @param type       An event type.
+ *  @param completion A block to be executed when the request finishes.
+ */
++(void)getAppsterdamMilanEventsWithType:(APPEventType)type
+                             Completion:(APPMeetupEventsHandler)completion;
 
 @end
