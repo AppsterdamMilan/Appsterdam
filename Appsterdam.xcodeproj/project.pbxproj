@@ -28,7 +28,6 @@
 		BEAA7D39180F4B8500276AA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D38180F4B8500276AA0 /* main.m */; };
 		BEAA7D3D180F4B8500276AA0 /* APPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */; };
 		BEAA7D40180F4B8500276AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D3E180F4B8500276AA0 /* Main.storyboard */; };
-		BEAA7D43180F4B8500276AA0 /* APPFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D42180F4B8500276AA0 /* APPFirstViewController.m */; };
 		BEAA7D48180F4B8500276AA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D47180F4B8500276AA0 /* Images.xcassets */; };
 		BEAA7D4F180F4B8500276AA0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D4E180F4B8500276AA0 /* XCTest.framework */; };
 		BEAA7D50180F4B8500276AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2C180F4B8500276AA0 /* Foundation.framework */; };
@@ -88,8 +87,6 @@
 		BEAA7D3B180F4B8500276AA0 /* APPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPAppDelegate.h; sourceTree = "<group>"; };
 		BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPAppDelegate.m; sourceTree = "<group>"; };
 		BEAA7D3F180F4B8500276AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BEAA7D41180F4B8500276AA0 /* APPFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPFirstViewController.h; sourceTree = "<group>"; };
-		BEAA7D42180F4B8500276AA0 /* APPFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPFirstViewController.m; sourceTree = "<group>"; };
 		BEAA7D47180F4B8500276AA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BEAA7D4D180F4B8500276AA0 /* AppsterdamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsterdamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA7D4E180F4B8500276AA0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -214,8 +211,6 @@
 			children = (
 				BEAA7D3B180F4B8500276AA0 /* APPAppDelegate.h */,
 				BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */,
-				BEAA7D41180F4B8500276AA0 /* APPFirstViewController.h */,
-				BEAA7D42180F4B8500276AA0 /* APPFirstViewController.m */,
 				BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */,
 				BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */,
 				BEAA7D3E180F4B8500276AA0 /* Main.storyboard */,
@@ -416,7 +411,6 @@
 				4DF8D92C183451E500D08356 /* APPMeetupOperationManager.m in Sources */,
 				BEAA7D3D180F4B8500276AA0 /* APPAppDelegate.m in Sources */,
 				4DF8D9331834721000D08356 /* APPVenue.m in Sources */,
-				BEAA7D43180F4B8500276AA0 /* APPFirstViewController.m in Sources */,
 				BE9B25EE18255B270093E2B4 /* APPOtherEvents.m in Sources */,
 				BE9B25E4182554EA0093E2B4 /* APPEventViewController.m in Sources */,
 				BEAA7D39180F4B8500276AA0 /* main.m in Sources */,
