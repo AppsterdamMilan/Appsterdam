@@ -10,6 +10,8 @@
 		012D621869B34BE491E73E74 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB5738C4CC14BC6BD0A1C59 /* libPods.a */; };
 		4D97ABBB182F9A2A009CCBF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646D18240A4E00A9652C /* SystemConfiguration.framework */; };
 		4D97ABBC182F9A31009CCBF2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D97F205182F99CC0027291C /* MobileCoreServices.framework */; };
+		4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */; };
+		4DF8D92C183451E500D08356 /* APPMeetupOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D92A183451E500D08356 /* APPMeetupOperationManager.m */; };
 		BE9964661824071800A9652C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9964651824071800A9652C /* AdSupport.framework */; };
 		BE99647018240A5400A9652C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646F18240A5400A9652C /* QuartzCore.framework */; };
 		BE9B25E4182554EA0093E2B4 /* APPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */; };
@@ -50,6 +52,10 @@
 /* Begin PBXFileReference section */
 		4D97F203182F99200027291C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4D97F205182F99CC0027291C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4DF8D927183451E500D08356 /* APPOAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPOAuthWebViewController.h; sourceTree = "<group>"; };
+		4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPOAuthWebViewController.m; sourceTree = "<group>"; };
+		4DF8D929183451E500D08356 /* APPMeetupOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPMeetupOperationManager.h; sourceTree = "<group>"; };
+		4DF8D92A183451E500D08356 /* APPMeetupOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPMeetupOperationManager.m; sourceTree = "<group>"; };
 		6D28F6CEF3E449AB968E2CE5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8DB5738C4CC14BC6BD0A1C59 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE186CBD182430B6009AA87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -127,6 +133,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DF8D926183451E500D08356 /* Meetup */ = {
+			isa = PBXGroup;
+			children = (
+				4DF8D927183451E500D08356 /* APPOAuthWebViewController.h */,
+				4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */,
+				4DF8D929183451E500D08356 /* APPMeetupOperationManager.h */,
+				4DF8D92A183451E500D08356 /* APPMeetupOperationManager.m */,
+			);
+			path = Meetup;
+			sourceTree = "<group>";
+		};
 		BE9B25DF182554EA0093E2B4 /* Single Event */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +244,7 @@
 		BEAD2318180FCE4D0023E7BB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4DF8D926183451E500D08356 /* Meetup */,
 				BE9B25DF182554EA0093E2B4 /* Single Event */,
 				BEAA7D84180F53C700276AA0 /* APPMeeUpCommunicator.h */,
 				BEAA7D85180F53C700276AA0 /* APPMeeUpCommunicator.m */,
@@ -379,8 +397,10 @@
 				BEAD231B180FCE6A0023E7BB /* APPEventsMangment.m in Sources */,
 				BEAA7D86180F53C700276AA0 /* APPMeeUpCommunicator.m in Sources */,
 				BEAD231E180FCFE10023E7BB /* APPEventsViewController.m in Sources */,
+				4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */,
 				BEAD2321180FD1CD0023E7BB /* APPWeeklyBeer.m in Sources */,
 				BE9B25F1182567850093E2B4 /* APPAnnotation.m in Sources */,
+				4DF8D92C183451E500D08356 /* APPMeetupOperationManager.m in Sources */,
 				BEAA7D3D180F4B8500276AA0 /* APPAppDelegate.m in Sources */,
 				BEAA7D43180F4B8500276AA0 /* APPFirstViewController.m in Sources */,
 				BE9B25EE18255B270093E2B4 /* APPOtherEvents.m in Sources */,
