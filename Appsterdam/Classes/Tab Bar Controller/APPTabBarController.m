@@ -15,9 +15,11 @@
 {
     [super viewDidAppear:animated];
     static BOOL didLogin = NO;
-    [APPMeetupOperationManager authorizeWithCompletion:^(BOOL success, NSError *error) {
-        didLogin = success;
-    }];
+    if (!didLogin) {
+        [APPMeetupOperationManager authorizeWithCompletion:^(BOOL success, NSError *error) {
+            didLogin = success;
+        }];
+    }
 }
 
 @end
