@@ -9,6 +9,7 @@
 #import "APPFirstViewController.h"
 #import "APPMeeUpCommunicator.h"
 #import "APPEventsMangment.h"
+#import "SVProgressHUD.h"
 
 static NSString *weeklybeer = @"Appsterdam Weekly Beer";
 static NSString *talklab = @"Appsterdam TalkLab";
@@ -17,7 +18,6 @@ static NSString *talklab = @"Appsterdam TalkLab";
     NSMutableArray *talkLabLists;
     NSMutableArray *weeklyBeerLists;
     NSMutableArray *othersEventLists;
-    MBProgressHUD *HUD;
 }
 
 @end
@@ -27,14 +27,7 @@ static NSString *talklab = @"Appsterdam TalkLab";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    if (!HUD) {
-        HUD = [[MBProgressHUD alloc] initWithView:self.view];
-        [self.view addSubview:HUD];
-        HUD.delegate = self;
-        [HUD show:YES];
-    }
-    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
     [APPMeeUpCommunicator getEvents:^(NSArray *events) {
         if (events != nil) {
             for (NSDictionary *event in events) {
@@ -60,7 +53,7 @@ static NSString *talklab = @"Appsterdam TalkLab";
             [mangment setWeeklyBeerList:weeklyBeerLists];
             [mangment setOthersEventList:othersEventLists];
         }
-        [HUD hide:YES];
+        [SVProgressHUD dismiss];
     }];
 }
 
@@ -68,14 +61,6 @@ static NSString *talklab = @"Appsterdam TalkLab";
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - MBProgressHUDDelegate methods
-
-- (void)hudWasHidden:(MBProgressHUD *)hud {
-	// Remove HUD from screen when the HUD was hidded
-	[HUD removeFromSuperview];
-	HUD = nil;
 }
 
 @end
