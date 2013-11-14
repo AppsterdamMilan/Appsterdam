@@ -8,15 +8,71 @@
 
 #import "APPEvent.h"
 
+@interface APPEvent ()
+@property (nonatomic, strong) NSString *eventStatus;
+@end
+
 @implementation APPEvent
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     self = [super init];
     if (self) {
-        
+        self.eventID = dictionary[@"id"];
+        self.name = dictionary[@"name"];
+        NSTimeInterval offset = [dictionary[@"utc_offset"] integerValue] / 1000;
+        NSTimeInterval created = [dictionary[@"created"] integerValue] / 1000;
+        self.creationDate = [NSDate dateWithTimeIntervalSince1970:created - offset];
+        NSTimeInterval updated = [dictionary[@"updated"] integerValue] / 1000;
+        self.updateDate = [NSDate dateWithTimeIntervalSince1970:updated - offset];
+        NSTimeInterval time = [dictionary[@"time"] integerValue] / 1000;
+        self.date = [NSDate dateWithTimeIntervalSince1970:time - offset];
+        self.eventDescription = dictionary[@"description"];
+        self.duration = [dictionary[@"duration"] integerValue] / 1000;
+        self.url = [NSURL URLWithString:dictionary[@"event_url"]];
+        self.eventStatus = dictionary[@"status"];
     }
     return self;
+}
+
+-(APPEventStatus)status
+{
+    APPEventStatus result = APPEventStatusUnknown;
+    if ([self.eventStatus isEqualToString:@"cancelled"]) {
+        result = APPEventStatusCancelled;
+    } else if ([self.eventStatus isEqualToString:@"upcoming"]) {
+        result = APPEventStatusUpcoming;
+    } else if ([self.eventStatus isEqualToString:@"past"]) {
+        result = APPEventStatusPast;
+    } else if ([self.eventStatus isEqualToString:@"proposed"]) {
+        result = APPEventStatusProposed;
+    } else if ([self.eventStatus isEqualToString:@"suggested"]) {
+        result = APPEventStatusSuggested;
+    } else if ([self.eventStatus isEqualToString:@"draft"]) {
+        result = APPEventStatusDraft;
+    }
+    return result;
+}
+
+-(APPEventType)type
+{
+    APPEventType result = APPEventTypeOther;
+    if ([self.name isEqualToString:@"Appsterdam Weekly Beer"]) {
+        result = APPEventTypeWeeklyBeer;
+    } else if ([self.name isEqualToString:@"Appsterdam TalkLab"]) {
+        result = APPEventTypeTalkLab;
+    }
+    return result;
+}
+
+-(BOOL)isWeeklyBeerEvent
+{
+    return [self type] == APPEventTypeWeeklyBeer;
+}
+
+-(BOOL)isTalkLabEvent
+{
+    return [self type] == APPEventTypeTalkLab;
 }
 
 @end
