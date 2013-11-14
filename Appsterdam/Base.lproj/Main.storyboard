@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="659" y="-364"/>
         </scene>
-        <!--Talk Lab - TalkLab-->
+        <!--Events View Controller - TalkLab-->
         <scene sceneID="MY7-x8-MFh">
             <objects>
-                <tableViewController title="TalkLab" id="UMv-MU-CkA" customClass="APPTalkLab" sceneMemberID="viewController">
+                <tableViewController title="TalkLab" id="UMv-MU-CkA" customClass="APPEventsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dH3-Ha-EEA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="1165" y="1056"/>
         </scene>
-        <!--Other Events - Altri Eventi-->
+        <!--Events View Controller - Altri Eventi-->
         <scene sceneID="XpK-1a-zHd">
             <objects>
-                <tableViewController id="Bud-8F-d3d" customClass="APPOtherEvents" sceneMemberID="viewController">
+                <tableViewController id="Bud-8F-d3d" customClass="APPEventsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bz6-eY-8B0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="659" y="1056"/>
         </scene>
-        <!--Weekly Beer - WeeklyBeer-->
+        <!--Events View Controller - WeeklyBeer-->
         <scene sceneID="VOn-xF-hOk">
             <objects>
-                <tableViewController title="WeeklyBeer" id="eVs-wa-zE3" customClass="APPWeeklyBeer" sceneMemberID="viewController">
+                <tableViewController title="WeeklyBeer" id="eVs-wa-zE3" customClass="APPEventsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bhg-PJ-g1O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -343,6 +343,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Hwj-kw-s9Z"/>
+        <segue reference="sR6-eT-Ryf"/>
     </inferredMetricsTieBreakers>
 </document>
