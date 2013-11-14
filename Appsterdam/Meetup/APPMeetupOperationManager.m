@@ -60,7 +60,7 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
 {
     [self getAppsterdamMilanEventsWithCompletion:^(NSArray *events, NSError *error) {
         if (completion) {
-            NSPredicate *eventTypePredicate = [NSPredicate predicateWithFormat:@"%K like %@", @"type", @(type)];
+            NSPredicate *eventTypePredicate = [NSPredicate predicateWithFormat:@"%K == %i", @"type", type];
             completion([events filteredArrayUsingPredicate:eventTypePredicate], error);
         }
     }];
