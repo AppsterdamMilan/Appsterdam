@@ -19,7 +19,6 @@
 		BE99647018240A5400A9652C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646F18240A5400A9652C /* QuartzCore.framework */; };
 		BE9B25E4182554EA0093E2B4 /* APPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */; };
 		BE9B25E5182554EA0093E2B4 /* APPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */; };
-		BE9B25F1182567850093E2B4 /* APPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25F0182567840093E2B4 /* APPAnnotation.m */; };
 		BEAA7D2D180F4B8500276AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2C180F4B8500276AA0 /* Foundation.framework */; };
 		BEAA7D2F180F4B8500276AA0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2E180F4B8500276AA0 /* CoreGraphics.framework */; };
 		BEAA7D31180F4B8500276AA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D30180F4B8500276AA0 /* UIKit.framework */; };
@@ -69,8 +68,6 @@
 		BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPEventViewController.m; sourceTree = "<group>"; };
 		BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPMapViewController.h; sourceTree = "<group>"; };
 		BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPMapViewController.m; sourceTree = "<group>"; };
-		BE9B25EF182567840093E2B4 /* APPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPAnnotation.h; sourceTree = "<group>"; };
-		BE9B25F0182567840093E2B4 /* APPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPAnnotation.m; sourceTree = "<group>"; };
 		BEAA7D29180F4B8500276AA0 /* Appsterdam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsterdam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA7D2C180F4B8500276AA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEAA7D2E180F4B8500276AA0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,8 +159,6 @@
 				BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */,
 				BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */,
 				BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */,
-				BE9B25EF182567840093E2B4 /* APPAnnotation.h */,
-				BE9B25F0182567840093E2B4 /* APPAnnotation.m */,
 			);
 			name = "Single Event";
 			path = "Classes/Single Event";
@@ -398,7 +393,6 @@
 				BEAD231E180FCFE10023E7BB /* APPEventsViewController.m in Sources */,
 				4DF8D93018345F8600D08356 /* APPEvent.m in Sources */,
 				4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */,
-				BE9B25F1182567850093E2B4 /* APPAnnotation.m in Sources */,
 				4DF8D92C183451E500D08356 /* APPMeetupOperationManager.m in Sources */,
 				BEAA7D3D180F4B8500276AA0 /* APPAppDelegate.m in Sources */,
 				4DF8D9331834721000D08356 /* APPVenue.m in Sources */,
