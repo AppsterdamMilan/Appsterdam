@@ -33,7 +33,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     webFlag = YES;
-    [self.descriptionWV loadHTMLString:self.eventData[@"description"] baseURL:nil];
+    [self.descriptionWV loadHTMLString:self.event.eventDescription
+                               baseURL:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,12 +46,9 @@
 - (IBAction)openMapViewController:(id)sender
 {
     APPMapViewController *mapViewController = [[APPMapViewController alloc] init];
-    NSString *lat = _eventData[@"venue"][@"lat"];
-    NSString *lon = _eventData[@"venue"][@"lon"];
-    mapViewController.nameLocation = _eventData[@"venue"][@"name"];
-    mapViewController.addressLocation = _eventData[@"venue"][@"address_1"];
-    mapViewController.venueLocation = [[CLLocation alloc] initWithLatitude:[lat floatValue] longitude:[lon floatValue]];
-    [self.navigationController pushViewController:mapViewController animated:YES];
+    mapViewController.annotation = self.event.venue;
+    [self.navigationController pushViewController:mapViewController
+                                         animated:YES];
 }
 
 - (IBAction)openVeespo:(id)sender

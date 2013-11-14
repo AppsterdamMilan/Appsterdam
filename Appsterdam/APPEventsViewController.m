@@ -118,10 +118,8 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    APPEventViewController *event = [segue destinationViewController];
-     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    event.eventData = [_events objectAtIndex:path.row];
-    NSLog(@"%@", event.eventData);
+    APPEventViewController *eventViewController = [segue destinationViewController];
+    eventViewController.event = self.events[[self.tableView indexPathForSelectedRow].row];
 }
 
 
