@@ -20,15 +20,14 @@
     if (self) {
         self.eventID = dictionary[@"id"];
         self.name = dictionary[@"name"];
-        NSTimeInterval offset = [dictionary[@"utc_offset"] integerValue] / 1000;
-        NSTimeInterval created = [dictionary[@"created"] integerValue] / 1000;
-        self.creationDate = [NSDate dateWithTimeIntervalSince1970:created - offset];
-        NSTimeInterval updated = [dictionary[@"updated"] integerValue] / 1000;
-        self.updateDate = [NSDate dateWithTimeIntervalSince1970:updated - offset];
-        NSTimeInterval time = [dictionary[@"time"] integerValue] / 1000;
-        self.date = [NSDate dateWithTimeIntervalSince1970:time - offset];
+        NSTimeInterval created = [dictionary[@"created"] doubleValue] / 1000;
+        self.creationDate = [NSDate dateWithTimeIntervalSince1970:created];
+        NSTimeInterval updated = [dictionary[@"updated"] doubleValue] / 1000;
+        self.updateDate = [NSDate dateWithTimeIntervalSince1970:updated];
+        NSTimeInterval time = [dictionary[@"time"] doubleValue] / 1000;
+        self.date = [NSDate dateWithTimeIntervalSince1970:time];
         self.eventDescription = dictionary[@"description"];
-        self.duration = [dictionary[@"duration"] integerValue] / 1000;
+        self.duration = [dictionary[@"duration"] doubleValue] / 1000;
         self.url = [NSURL URLWithString:dictionary[@"event_url"]];
         self.eventStatus = dictionary[@"status"];
     }
