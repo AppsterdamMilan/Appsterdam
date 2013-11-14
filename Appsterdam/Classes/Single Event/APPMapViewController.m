@@ -7,54 +7,22 @@
 //
 
 #import "APPMapViewController.h"
-#import "APPAnnotation.h"
 
-@interface APPMapViewController () {
-    CLLocationManager *_locationManager;
-    MKMapView* mapView;
-}
-
+@interface APPMapViewController ()
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) MKMapView *mapView;
 @end
 
 @implementation APPMapViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+#pragma mark - UIViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    // MAKMapView
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, 320, (screenBounds.size.height == 568)?568:480)];
-    [mapView setShowsUserLocation:YES];
-    [mapView setZoomEnabled:YES];
-    [mapView setScrollEnabled:YES];
-    [mapView setRotateEnabled:YES];
-    mapView.delegate = self;
-    mapView.tintColor = [UIColor redColor];
-    
-    APPAnnotation *annotation = [[APPAnnotation alloc] init];
-    [annotation.location setCoordinate:self.venueLocation.coordinate];
-    annotation.name = self.nameLocation;
-    annotation.address = self.addressLocation;
-    [mapView addAnnotation:annotation];
-    
-    // LocationManager
-	_locationManager = [[CLLocationManager alloc] init];
-    _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
-    _locationManager.delegate = self;
-    _locationManager.distanceFilter = 200;
-    [_locationManager startUpdatingLocation];
-    
-    [self.view addSubview:mapView];
+    [self.locationManager startUpdatingLocation];
+    [self.view addSubview:self.mapView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,20 +33,49 @@
     _locationManager = nil;
 }
 
+#pragma mark - Getters And Setters
+
+-(MKMapView *)mapView
+{
+    if (!_mapView) {
+        _mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+        _mapView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        [_mapView setShowsUserLocation:YES];
+        [_mapView setZoomEnabled:YES];
+        [_mapView setScrollEnabled:YES];
+        [_mapView setRotateEnabled:YES];
+        _mapView.delegate = self;
+        _mapView.tintColor = [UIColor redColor];
+        [_mapView addAnnotation:self.annotation];
+    }
+    return _mapView;
+}
+
+-(CLLocationManager *)locationManager
+{
+    if (!_locationManager) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+        _locationManager.delegate = self;
+        _locationManager.distanceFilter = 200;
+    }
+    return _locationManager;
+}
+
 #pragma mark - Location and Map
 
 -(void)setupMap
 {
-    MKMapPoint annotationPoint = MKMapPointForCoordinate(mapView.userLocation.coordinate);
+    MKMapPoint annotationPoint = MKMapPointForCoordinate(self.mapView.userLocation.coordinate);
     MKMapRect zoomRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 3.5, 3.5);
-    for (id <MKAnnotation> annotation in mapView.annotations)
+    for (id <MKAnnotation> annotation in self.mapView.annotations)
     {
         MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
         MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 4.0, 4.0);
         zoomRect = MKMapRectUnion(zoomRect, pointRect);
     }
-    [mapView setVisibleMapRect:zoomRect animated:YES];
-    [_locationManager stopUpdatingLocation];
+    [self.mapView setVisibleMapRect:zoomRect animated:YES];
+    [self.locationManager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -97,7 +94,7 @@
     if (!pin) {
         pin = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:s];
         pin.canShowCallout = YES;
-        pin.calloutOffset = CGPointMake(0, 0);
+        pin.calloutOffset = CGPointZero;
     }
     return pin;
 }
