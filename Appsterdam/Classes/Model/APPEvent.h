@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APPVenue.h"
 
 /**
  *  The possible statuses of an event.
@@ -75,6 +76,11 @@ typedef NS_ENUM(NSUInteger, APPEventType) {
  *  The name of the event
  */
 @property (nonatomic, strong) NSString *name;
+
+/**
+ *  The event venue.
+ */
+@property (nonatomic, strong) APPVenue *venue;
 
 /**
  *  The creation date of the event.

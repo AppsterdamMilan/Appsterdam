@@ -20,6 +20,7 @@
     if (self) {
         self.eventID = dictionary[@"id"];
         self.name = dictionary[@"name"];
+        self.venue = [[APPVenue alloc] initWithDictionary:dictionary[@"venue"]];
         NSTimeInterval created = [dictionary[@"created"] doubleValue] / 1000;
         self.creationDate = [NSDate dateWithTimeIntervalSince1970:created];
         NSTimeInterval updated = [dictionary[@"updated"] doubleValue] / 1000;
