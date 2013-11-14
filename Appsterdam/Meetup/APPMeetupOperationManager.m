@@ -7,6 +7,7 @@
 //
 
 #import "APPMeetupOperationManager.h"
+#import "APPEvent.h"
 
 // Created with Mouhcine's account (We need to dig and see if we can have one for Appsterdam)
 static NSString * const APPMeetupKey = @"ihjgomeoh5hu7rqcuplge9ik9";
@@ -14,7 +15,9 @@ static NSString * const APPMeetupKey = @"ihjgomeoh5hu7rqcuplge9ik9";
 static NSString * const APPMeetupRedirectUri = @"appsterdam://oauth";
 static NSString * const APPMeetupOAuth2Url = @"https://secure.meetup.com/oauth2/authorize";
 
-static NSString * const APPMeetupAPIUrl = @"http://api.meetup.com";
+static NSString * const APPMeetupAPIUrl = @"https://api.meetup.com";
+static NSString * const APPAppsterdamMilanMeetupID = @"3242342";
+static NSString * const APPMeetupListPage = @"20";
 
 static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
 
@@ -30,6 +33,29 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
     return _sharedInstance;
 }
 
+#pragma mark - Events
+
++(void)getAppsterdamMilanEventsWithCompletion:(APPMeetupEventsHandler)completion
+{
+    [[self sharedInstance] GET:@"2/events"
+                    parameters:@{@"group_id": APPAppsterdamMilanMeetupID, @"page" : APPMeetupListPage}
+                       success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                           if (completion) {
+                               NSArray *results = responseObject[@"results"];
+                               NSMutableArray *array = [NSMutableArray array];
+                               for (NSDictionary *dictionary in results) {
+                                   [array addObject:[[APPEvent alloc] initWithDictionary:dictionary]];
+                               }
+                               completion(array, nil);
+                           }
+                       }
+                       failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                           if (completion) {
+                               completion(nil, error);
+                           }
+                       }];
+}
+
 #pragma mark - OAuth2
 
 +(void)authorizeWithCompletion:(APPMeetupRequestHandler)completion
@@ -42,14 +68,13 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
         NSDictionary *parameters = [self responseObjectFromRedirectURL:url];
         NSString *token = parameters[@"access_token"];
         if (token) {
-            [[[self sharedInstance] requestSerializer] setValue:[NSString stringWithFormat:@"Bearer %@", token]
+            [[[self sharedInstance] requestSerializer] setValue:[NSString stringWithFormat:@"bearer %@", token]
                                              forHTTPHeaderField:@"Authorization"];
             if (completion) {
-                [rootViewController dismissViewControllerAnimated:YES
-                                                       completion:^{
-                                                           completion(YES, nil) ;
-                                                       }];
+                completion(YES, nil);
             }
+            [rootViewController dismissViewControllerAnimated:YES
+                                                   completion:nil];
         } else if (completion) {
             completion(NO, [NSError errorWithDomain:APPMeetupErrorDomain
                                                code:0

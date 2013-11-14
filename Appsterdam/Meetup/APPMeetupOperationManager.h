@@ -17,6 +17,14 @@
  */
 typedef void (^APPMeetupRequestHandler) (BOOL success, NSError *error);
 
+/**
+ *  A block object to be executed when an event fetch operation finishes.
+ *
+ *  @param events  An array of event objects.
+ *  @param error   An error if one occured.
+ */
+typedef void (^APPMeetupEventsHandler) (NSArray *events, NSError *error);
+
 @interface APPMeetupOperationManager : AFHTTPRequestOperationManager
 
 /**
@@ -26,6 +34,8 @@ typedef void (^APPMeetupRequestHandler) (BOOL success, NSError *error);
  */
 +(instancetype)sharedInstance;
 
+#pragma mark - OAuth
+
 /**
  *  Authorizes a user using OAuth2.
  *
@@ -33,5 +43,14 @@ typedef void (^APPMeetupRequestHandler) (BOOL success, NSError *error);
  *  @discussion This class method present a web view controller. It must not be called before the root view controller is on screen, if so it will raise an exception.
  */
 +(void)authorizeWithCompletion:(APPMeetupRequestHandler)completion;
+
+#pragma mark - Events
+
+/**
+ *  Makes a request for events scheduled in Appsterdam Milan Meetup group.
+ *
+ *  @param completion A block to be executed when the request finishes.
+ */
++(void)getAppsterdamMilanEventsWithCompletion:(APPMeetupEventsHandler)completion;
 
 @end
