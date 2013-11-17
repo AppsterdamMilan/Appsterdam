@@ -88,8 +88,8 @@
 		BEAA7D81180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		BEAA7D82180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEAA7D83180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPEventsViewController.h; sourceTree = "<group>"; };
-		BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPEventsViewController.m; sourceTree = "<group>"; };
+		BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEventsViewController.h; path = ../Controllers/APPEventsViewController.h; sourceTree = "<group>"; };
+		BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEventsViewController.m; path = ../Controllers/APPEventsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +126,6 @@
 			children = (
 				BEAA7D3B180F4B8500276AA0 /* APPAppDelegate.h */,
 				BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */,
-				BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */,
-				BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */,
 				BEAA7D3E180F4B8500276AA0 /* Main.storyboard */,
 				BEAA7D47180F4B8500276AA0 /* Images.xcassets */,
 			);
@@ -137,10 +135,10 @@
 		4DF8D926183451E500D08356 /* Meetup */ = {
 			isa = PBXGroup;
 			children = (
-				4DF8D927183451E500D08356 /* APPOAuthWebViewController.h */,
-				4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */,
 				4DF8D929183451E500D08356 /* APPMeetupOperationManager.h */,
 				4DF8D92A183451E500D08356 /* APPMeetupOperationManager.m */,
+				4DF8D927183451E500D08356 /* APPOAuthWebViewController.h */,
+				4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */,
 			);
 			path = Meetup;
 			sourceTree = "<group>";
@@ -159,12 +157,14 @@
 		BE9B25DF182554EA0093E2B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4DF8D9351834CF4900D08356 /* APPTabBarController.h */,
-				4DF8D9361834CF4900D08356 /* APPTabBarController.m */,
+				BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */,
+				BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */,
 				BE9B25E0182554EA0093E2B4 /* APPEventViewController.h */,
 				BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */,
 				BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */,
 				BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */,
+				4DF8D9351834CF4900D08356 /* APPTabBarController.h */,
+				4DF8D9361834CF4900D08356 /* APPTabBarController.m */,
 			);
 			name = Controllers;
 			path = "Single Event";
