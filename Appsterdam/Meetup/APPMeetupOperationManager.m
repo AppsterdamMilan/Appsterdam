@@ -2,17 +2,18 @@
 
 
 // FIXME: Contact @spllr for Appsterdam account details
-// FIXME: Move credentials to keys.plist file
-static NSString * const APPMeetupKey = @"ihjgomeoh5hu7rqcuplge9ik9";
 
-static NSString * const APPMeetupRedirectUri = @"appsterdam://oauth";
-static NSString * const APPMeetupOAuth2Url = @"https://secure.meetup.com/oauth2/authorize";
+static NSString * const kAPPKeysFileName = @"Appsterdam-Keys";
+static NSString * const kAPPMeetupKey = @"APPMeetupKey";
 
-static NSString * const APPMeetupAPIUrl = @"https://api.meetup.com";
-static NSString * const APPAppsterdamMilanMeetupID = @"3242342";
-static NSString * const APPMeetupListPage = @"20";
+static NSString * const kAPPMeetupRedirectUri = @"APPMeetupRedirectUri";
+static NSString * const kAPPMeetupOAuth2Url = @"APPMeetupOAuth2Url";
 
-static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
+static NSString * const kAPPMeetupAPIUrl = @"APPMeetupAPIUrl";
+static NSString * const kAPPAppsterdamMilanMeetupID = @"APPAppsterdamMilanMeetupID";
+static NSString * const kAPPMeetupListPage = @"APPMeetupListPage";
+
+static NSString * const kAPPMeetupErrorDomain = @"APPMeetupErrorDomain";
 
 @implementation APPMeetupOperationManager
 
@@ -23,7 +24,10 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
     static APPMeetupOperationManager *_sharedInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[APPMeetupOperationManager alloc] initWithBaseURL:[NSURL URLWithString:APPMeetupAPIUrl]];
+        NSString *keysPath = [[NSBundle mainBundle] pathForResource:kAPPKeysFileName ofType:@"plist"];
+        NSDictionary *keys = [NSDictionary dictionaryWithContentsOfFile:keysPath];
+        NSString *meetupAPIUrl = keys[kAPPMeetupAPIUrl];
+        _sharedInstance = [[APPMeetupOperationManager alloc] initWithBaseURL:[NSURL URLWithString:meetupAPIUrl]];
     });
     return _sharedInstance;
 }
@@ -34,8 +38,13 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
 
 + (void)getAppsterdamMilanEventsWithCompletion:(APPMeetupEventsHandler)completion
 {
+    NSString *keysPath = [[NSBundle mainBundle] pathForResource:kAPPKeysFileName ofType:@"plist"];
+    NSDictionary *keys = [NSDictionary dictionaryWithContentsOfFile:keysPath];
+    NSString *appsterdamMilanMeetupID = keys[kAPPAppsterdamMilanMeetupID];
+    NSString *meetupListPage = keys[kAPPMeetupListPage];
+    
     [[self sharedInstance] GET:@"2/events"
-                    parameters:@{@"group_id": APPAppsterdamMilanMeetupID, @"page" : APPMeetupListPage}
+                    parameters:@{@"group_id": appsterdamMilanMeetupID, @"page" : meetupListPage}
                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
                            if (completion) {
                                NSArray *results = responseObject[@"results"];
@@ -68,7 +77,11 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
 
 + (void)authorizeWithCompletion:(APPMeetupRequestHandler)completion
 {
-    NSAssert([APPMeetupKey length] > 0, @"Missing Meetup key");
+    NSString *keysPath = [[NSBundle mainBundle] pathForResource:kAPPKeysFileName ofType:@"plist"];
+    NSDictionary *keys = [NSDictionary dictionaryWithContentsOfFile:keysPath];
+    NSString *meetupKey = keys[kAPPMeetupKey];
+    
+    NSAssert([meetupKey length] > 0, @"Missing Meetup key");
     UIViewController *rootViewController = [[UIApplication sharedApplication] delegate].window.rootViewController;
     NSAssert(rootViewController.view.window, @"Authorization can be started only after the root view controller is on screen");
     
@@ -84,13 +97,13 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
             [rootViewController dismissViewControllerAnimated:YES
                                                    completion:nil];
         } else if (completion) {
-            completion(NO, [NSError errorWithDomain:APPMeetupErrorDomain
+            completion(NO, [NSError errorWithDomain:keys[kAPPMeetupErrorDomain]
                                                code:0
                                            userInfo:@{NSLocalizedDescriptionKey: [parameters[@"errors"] description]}]);
         }
     };
     APPOAuthWebViewController *authController = [[APPOAuthWebViewController alloc] initWithRequest:[self authRequest]
-                                                                                                 redirectUri:APPMeetupRedirectUri
+                                                                                                 redirectUri:keys[kAPPMeetupRedirectUri]
                                                                                                   completion:redirectBlock];    
     [rootViewController presentViewController:authController
                                      animated:YES
@@ -101,10 +114,13 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
 
 + (NSURLRequest *)authRequest
 {
+    NSString *keysPath = [[NSBundle mainBundle] pathForResource:kAPPKeysFileName ofType:@"plist"];
+    NSDictionary *keys = [NSDictionary dictionaryWithContentsOfFile:keysPath];
+    
     NSString *urlString = [NSString stringWithFormat:@"%@?client_id=%@&response_type=token&redirect_uri=%@",
-                           APPMeetupOAuth2Url,
-                           APPMeetupKey,
-                           [APPMeetupRedirectUri stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                           keys[kAPPMeetupOAuth2Url],
+                           keys[kAPPMeetupKey],
+                           [keys[kAPPMeetupRedirectUri] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     return [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
 }
 
@@ -113,7 +129,10 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
 
 + (NSDictionary *)responseObjectFromRedirectURL:(NSURL *)url
 {
-    NSString *form = [[[url absoluteString] lowercaseString] stringByReplacingOccurrencesOfString:[APPMeetupRedirectUri stringByAppendingString:@"?"]
+    NSString *keysPath = [[NSBundle mainBundle] pathForResource:kAPPKeysFileName ofType:@"plist"];
+    NSDictionary *keys = [NSDictionary dictionaryWithContentsOfFile:keysPath];
+    
+    NSString *form = [[[url absoluteString] lowercaseString] stringByReplacingOccurrencesOfString:[keys[kAPPMeetupRedirectUri] stringByAppendingString:@"?"]
                                                                                        withString:@""];
     NSArray *pairs = [form componentsSeparatedByString:@"&"];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
