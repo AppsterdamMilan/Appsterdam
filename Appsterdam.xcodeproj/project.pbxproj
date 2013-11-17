@@ -79,7 +79,7 @@
 		BEAA7D34180F4B8500276AA0 /* Appsterdam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Appsterdam-Info.plist"; path = "Supporting Files/Appsterdam-Info.plist"; sourceTree = "<group>"; };
 		BEAA7D36180F4B8500276AA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEAA7D38180F4B8500276AA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
-		BEAA7D3A180F4B8500276AA0 /* Appsterdam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Appsterdam-Prefix.pch"; path = "Supporting Files/Appsterdam-Prefix.pch"; sourceTree = "<group>"; };
+		BEAA7D3A180F4B8500276AA0 /* Supporting Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Supporting Files"; sourceTree = "<group>"; };
 		BEAA7D3B180F4B8500276AA0 /* APPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = APPAppDelegate.h; path = Application/APPAppDelegate.h; sourceTree = "<group>"; };
 		BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = APPAppDelegate.m; path = Application/APPAppDelegate.m; sourceTree = "<group>"; };
 		BEAA7D3F180F4B8500276AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 				4A2FE2EC1838F998007A3BCE /* Appsterdam-Keys.plist */,
 				BEAA7D35180F4B8500276AA0 /* InfoPlist.strings */,
 				BEAA7D38180F4B8500276AA0 /* main.m */,
-				BEAA7D3A180F4B8500276AA0 /* Appsterdam-Prefix.pch */,
+				BEAA7D3A180F4B8500276AA0 /* Supporting Files */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -529,8 +529,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Appsterdam/Appsterdam-Prefix.pch";
-				INFOPLIST_FILE = "Appsterdam/Appsterdam-Info.plist";
+				GCC_PREFIX_HEADER = "Appsterdam/Supporting Files/Appsterdam-Prefix.pch";
+				INFOPLIST_FILE = "Appsterdam/Supporting Files/Appsterdam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -545,8 +545,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Appsterdam/Appsterdam-Prefix.pch";
-				INFOPLIST_FILE = "Appsterdam/Appsterdam-Info.plist";
+				GCC_PREFIX_HEADER = "Appsterdam/Supporting Files/Appsterdam-Prefix.pch";
+				INFOPLIST_FILE = "Appsterdam/Supporting Files/Appsterdam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
