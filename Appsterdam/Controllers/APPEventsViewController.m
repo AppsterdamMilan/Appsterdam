@@ -5,6 +5,7 @@
 #import "SVProgressHUD.h"
 #import <AdSupport/AdSupport.h>
 
+static NSString * const kAPPEventsCellIdentfier = @"Cell";
 static NSString * const kAPPEventsShowDetailsSegueIdentifier = @"showDetails";
 static NSString * const kAPPEventsTalkLabTitle = @"TalkLab";
 static NSString * const kAPPEventsWeeklyBeerTitle = @"WeeklyBeer";
@@ -21,8 +22,9 @@ static NSString * const kAPPEventsWeeklyBeerTitle = @"WeeklyBeer";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if (![segue.identifier isEqualToString:kAPPEventsShowDetailsSegueIdentifier])
+        return;
+    
     APPEventViewController *eventViewController = [segue destinationViewController];
     eventViewController.event = self.events[[self.tableView indexPathForSelectedRow].row];
 }
@@ -47,8 +49,7 @@ static NSString * const kAPPEventsWeeklyBeerTitle = @"WeeklyBeer";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kAPPEventsCellIdentfier
                                                             forIndexPath:indexPath];
     APPEvent *event = self.events[indexPath.row];
     cell.textLabel.text = event.name;
@@ -81,7 +82,7 @@ static NSString * const kAPPEventsWeeklyBeerTitle = @"WeeklyBeer";
 {
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
     [APPMeetupOperationManager getAppsterdamMilanEventsWithType:[self eventType]
-                                                     Completion:^(NSArray *events, NSError *error) {
+                                                     completion:^(NSArray *events, NSError *error) {
                                                          if (!error) {
                                                              self.events = events;
                                                              [self.tableView reloadData];

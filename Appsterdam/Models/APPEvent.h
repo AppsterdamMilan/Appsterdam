@@ -1,13 +1,5 @@
-//
-//  APPEvent.h
-//  Appsterdam
-//
-//  Created by Mouhcine El Amine on 14/11/13.
-//  Copyright (c) 2013 Alessio Roberto. All rights reserved.
-//
 
-#import <Foundation/Foundation.h>
-#import "APPVenue.h"
+@class APPVenue;
 
 /**
  *  The possible statuses of an event.
@@ -119,36 +111,35 @@ typedef NS_ENUM(NSUInteger, APPEventType) {
  *
  *  @return An initiliazed `APPEvent` object or nil.
  */
--(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 /**
  *  Returns the status of the event.
  *
  *  @return The status of the event.
  */
--(APPEventStatus)status;
+- (APPEventStatus)status;
 
-#pragma mark - Appsterdam Milan
 
 /**
  *  Returns the type of the event.
  *
  *  @return The type of the event.
  */
--(APPEventType)type;
+- (APPEventType)type;
 
 /**
  *  Checks if the event is of type `APPEventTypeWeeklyBeer`.
  *
  *  @return YES if the event is of type `APPEventTypeWeeklyBeer`, NO otherwise.
  */
--(BOOL)isWeeklyBeerEvent;
+- (BOOL)isWeeklyBeerEvent;
 
 /**
  *  Checks if the event is of type `APPEventTypeTalkLab`.
  *
  *  @return YES if the event is of type `APPEventTypeTalkLab`, NO otherwise.
  */
--(BOOL)isTalkLabEvent;
+- (BOOL)isTalkLabEvent;
 
 @end

@@ -71,7 +71,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="u0V-yP-MbZ" detailTextLabel="H3Y-YP-rJ2" style="IBUITableViewCellStyleSubtitle" id="Sdq-Oa-ZXf">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sdq-Oa-ZXf" id="2rj-iV-hNg">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -115,7 +115,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="U8T-dz-Pks" detailTextLabel="6kL-bJ-JCi" style="IBUITableViewCellStyleSubtitle" id="wsw-8U-oUJ">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wsw-8U-oUJ" id="DJJ-ZN-DL1">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -191,7 +191,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="zzs-kD-ZdO" detailTextLabel="8JZ-ec-txt" style="IBUITableViewCellStyleSubtitle" id="Slb-aj-tEX">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Slb-aj-tEX" id="R4u-Sb-3KU">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -281,8 +281,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descriptionWV" destination="1Pu-sk-sgO" id="2mJ-rK-WZC"/>
-                        <outlet property="directionBtn" destination="mg1-MS-pfl" id="vAO-EL-V6a"/>
+                        <outlet property="descriptionWebView" destination="1Pu-sk-sgO" id="yBF-6x-PV2"/>
+                        <outlet property="directionButton" destination="mg1-MS-pfl" id="par-gX-ohY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKu-Ec-EkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
