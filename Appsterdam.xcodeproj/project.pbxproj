@@ -12,6 +12,8 @@
 		4A2FE2E91838EBED007A3BCE /* APPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE2E31838EBED007A3BCE /* APPEventViewController.m */; };
 		4A2FE2EA1838EBED007A3BCE /* APPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE2E51838EBED007A3BCE /* APPMapViewController.m */; };
 		4A2FE2EB1838EBED007A3BCE /* APPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE2E71838EBED007A3BCE /* APPTabBarController.m */; };
+		4A2FE2ED1838F998007A3BCE /* Appsterdam-Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FE2EC1838F998007A3BCE /* Appsterdam-Keys.plist */; };
+		4A2FE2EF1838FB8D007A3BCE /* APPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */; };
 		4D97ABBB182F9A2A009CCBF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646D18240A4E00A9652C /* SystemConfiguration.framework */; };
 		4D97ABBC182F9A31009CCBF2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D97F205182F99CC0027291C /* MobileCoreServices.framework */; };
 		4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */; };
@@ -25,7 +27,6 @@
 		BEAA7D31180F4B8500276AA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D30180F4B8500276AA0 /* UIKit.framework */; };
 		BEAA7D37180F4B8500276AA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D35180F4B8500276AA0 /* InfoPlist.strings */; };
 		BEAA7D39180F4B8500276AA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D38180F4B8500276AA0 /* main.m */; };
-		BEAA7D3D180F4B8500276AA0 /* APPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */; };
 		BEAA7D40180F4B8500276AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D3E180F4B8500276AA0 /* Main.storyboard */; };
 		BEAA7D48180F4B8500276AA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D47180F4B8500276AA0 /* Images.xcassets */; };
 		BEAA7D4F180F4B8500276AA0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D4E180F4B8500276AA0 /* XCTest.framework */; };
@@ -54,6 +55,7 @@
 		4A2FE2E51838EBED007A3BCE /* APPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPMapViewController.m; path = Appsterdam/Controllers/APPMapViewController.m; sourceTree = SOURCE_ROOT; };
 		4A2FE2E61838EBED007A3BCE /* APPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPTabBarController.h; path = Appsterdam/Controllers/APPTabBarController.h; sourceTree = SOURCE_ROOT; };
 		4A2FE2E71838EBED007A3BCE /* APPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPTabBarController.m; path = Appsterdam/Controllers/APPTabBarController.m; sourceTree = SOURCE_ROOT; };
+		4A2FE2EC1838F998007A3BCE /* Appsterdam-Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Appsterdam-Keys.plist"; path = "Supporting Files/Appsterdam-Keys.plist"; sourceTree = "<group>"; };
 		4D97F203182F99200027291C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4D97F205182F99CC0027291C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4DF8D927183451E500D08356 /* APPOAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPOAuthWebViewController.h; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				BEAA7D34180F4B8500276AA0 /* Appsterdam-Info.plist */,
+				4A2FE2EC1838F998007A3BCE /* Appsterdam-Keys.plist */,
 				BEAA7D35180F4B8500276AA0 /* InfoPlist.strings */,
 				BEAA7D38180F4B8500276AA0 /* main.m */,
 				BEAA7D3A180F4B8500276AA0 /* Appsterdam-Prefix.pch */,
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAA7D48180F4B8500276AA0 /* Images.xcassets in Resources */,
+				4A2FE2ED1838F998007A3BCE /* Appsterdam-Keys.plist in Resources */,
 				BEAA7D37180F4B8500276AA0 /* InfoPlist.strings in Resources */,
 				BEAA7D40180F4B8500276AA0 /* Main.storyboard in Resources */,
 			);
@@ -386,9 +390,9 @@
 				4A2FE2E81838EBED007A3BCE /* APPEventsViewController.m in Sources */,
 				4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */,
 				4DF8D92C183451E500D08356 /* APPMeetupOperationManager.m in Sources */,
-				BEAA7D3D180F4B8500276AA0 /* APPAppDelegate.m in Sources */,
 				4A2FE2E91838EBED007A3BCE /* APPEventViewController.m in Sources */,
 				4DF8D9331834721000D08356 /* APPVenue.m in Sources */,
+				4A2FE2EF1838FB8D007A3BCE /* APPAppDelegate.m in Sources */,
 				4A2FE2EB1838EBED007A3BCE /* APPTabBarController.m in Sources */,
 				BEAA7D39180F4B8500276AA0 /* main.m in Sources */,
 				4A2FE2EA1838EBED007A3BCE /* APPMapViewController.m in Sources */,
