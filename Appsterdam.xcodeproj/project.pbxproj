@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		012D621869B34BE491E73E74 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB5738C4CC14BC6BD0A1C59 /* libPods.a */; };
+		4A2FE2E81838EBED007A3BCE /* APPEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE2E11838EBED007A3BCE /* APPEventsViewController.m */; };
+		4A2FE2E91838EBED007A3BCE /* APPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE2E31838EBED007A3BCE /* APPEventViewController.m */; };
+		4A2FE2EA1838EBED007A3BCE /* APPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE2E51838EBED007A3BCE /* APPMapViewController.m */; };
+		4A2FE2EB1838EBED007A3BCE /* APPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FE2E71838EBED007A3BCE /* APPTabBarController.m */; };
 		4D97ABBB182F9A2A009CCBF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646D18240A4E00A9652C /* SystemConfiguration.framework */; };
 		4D97ABBC182F9A31009CCBF2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D97F205182F99CC0027291C /* MobileCoreServices.framework */; };
 		4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */; };
 		4DF8D92C183451E500D08356 /* APPMeetupOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D92A183451E500D08356 /* APPMeetupOperationManager.m */; };
 		4DF8D93018345F8600D08356 /* APPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D92F18345F8600D08356 /* APPEvent.m */; };
 		4DF8D9331834721000D08356 /* APPVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D9321834721000D08356 /* APPVenue.m */; };
-		4DF8D9371834CF4900D08356 /* APPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D9361834CF4900D08356 /* APPTabBarController.m */; };
 		BE9964661824071800A9652C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9964651824071800A9652C /* AdSupport.framework */; };
 		BE99647018240A5400A9652C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646F18240A5400A9652C /* QuartzCore.framework */; };
-		BE9B25E4182554EA0093E2B4 /* APPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */; };
-		BE9B25E5182554EA0093E2B4 /* APPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */; };
 		BEAA7D2D180F4B8500276AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2C180F4B8500276AA0 /* Foundation.framework */; };
 		BEAA7D2F180F4B8500276AA0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2E180F4B8500276AA0 /* CoreGraphics.framework */; };
 		BEAA7D31180F4B8500276AA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D30180F4B8500276AA0 /* UIKit.framework */; };
@@ -32,7 +33,6 @@
 		BEAA7D51180F4B8500276AA0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D30180F4B8500276AA0 /* UIKit.framework */; };
 		BEAA7D59180F4B8500276AA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEAA7D57180F4B8500276AA0 /* InfoPlist.strings */; };
 		BEAA7D5B180F4B8500276AA0 /* AppsterdamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA7D5A180F4B8500276AA0 /* AppsterdamTests.m */; };
-		BEAD231E180FCFE10023E7BB /* APPEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A2FE2E01838EBED007A3BCE /* APPEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEventsViewController.h; path = Appsterdam/Controllers/APPEventsViewController.h; sourceTree = SOURCE_ROOT; };
+		4A2FE2E11838EBED007A3BCE /* APPEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEventsViewController.m; path = Appsterdam/Controllers/APPEventsViewController.m; sourceTree = SOURCE_ROOT; };
+		4A2FE2E21838EBED007A3BCE /* APPEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEventViewController.h; path = Appsterdam/Controllers/APPEventViewController.h; sourceTree = SOURCE_ROOT; };
+		4A2FE2E31838EBED007A3BCE /* APPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEventViewController.m; path = Appsterdam/Controllers/APPEventViewController.m; sourceTree = SOURCE_ROOT; };
+		4A2FE2E41838EBED007A3BCE /* APPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPMapViewController.h; path = Appsterdam/Controllers/APPMapViewController.h; sourceTree = SOURCE_ROOT; };
+		4A2FE2E51838EBED007A3BCE /* APPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPMapViewController.m; path = Appsterdam/Controllers/APPMapViewController.m; sourceTree = SOURCE_ROOT; };
+		4A2FE2E61838EBED007A3BCE /* APPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPTabBarController.h; path = Appsterdam/Controllers/APPTabBarController.h; sourceTree = SOURCE_ROOT; };
+		4A2FE2E71838EBED007A3BCE /* APPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPTabBarController.m; path = Appsterdam/Controllers/APPTabBarController.m; sourceTree = SOURCE_ROOT; };
 		4D97F203182F99200027291C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4D97F205182F99CC0027291C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4DF8D927183451E500D08356 /* APPOAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPOAuthWebViewController.h; sourceTree = "<group>"; };
@@ -56,18 +64,12 @@
 		4DF8D92F18345F8600D08356 /* APPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEvent.m; path = "/Users/klaas/Documents/spllr/appsterdam/Appsterdam-APp/Appsterdam/Models/APPEvent.m"; sourceTree = "<absolute>"; };
 		4DF8D9311834721000D08356 /* APPVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPVenue.h; sourceTree = "<group>"; };
 		4DF8D9321834721000D08356 /* APPVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPVenue.m; sourceTree = "<group>"; };
-		4DF8D9351834CF4900D08356 /* APPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPTabBarController.h; path = ../Controllers/APPTabBarController.h; sourceTree = "<group>"; };
-		4DF8D9361834CF4900D08356 /* APPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPTabBarController.m; path = ../Controllers/APPTabBarController.m; sourceTree = "<group>"; };
 		6D28F6CEF3E449AB968E2CE5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8DB5738C4CC14BC6BD0A1C59 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE186CBD182430B6009AA87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		BE9964651824071800A9652C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BE99646D18240A4E00A9652C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BE99646F18240A5400A9652C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		BE9B25E0182554EA0093E2B4 /* APPEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEventViewController.h; path = ../Controllers/APPEventViewController.h; sourceTree = "<group>"; };
-		BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEventViewController.m; path = ../Controllers/APPEventViewController.m; sourceTree = "<group>"; };
-		BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPMapViewController.h; path = ../Controllers/APPMapViewController.h; sourceTree = "<group>"; };
-		BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPMapViewController.m; path = ../Controllers/APPMapViewController.m; sourceTree = "<group>"; };
 		BEAA7D29180F4B8500276AA0 /* Appsterdam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsterdam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA7D2C180F4B8500276AA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEAA7D2E180F4B8500276AA0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,8 +90,6 @@
 		BEAA7D81180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		BEAA7D82180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEAA7D83180F52FE00276AA0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEventsViewController.h; path = ../Controllers/APPEventsViewController.h; sourceTree = "<group>"; };
-		BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEventsViewController.m; path = ../Controllers/APPEventsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,14 +157,14 @@
 		BE9B25DF182554EA0093E2B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */,
-				BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */,
-				BE9B25E0182554EA0093E2B4 /* APPEventViewController.h */,
-				BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */,
-				BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */,
-				BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */,
-				4DF8D9351834CF4900D08356 /* APPTabBarController.h */,
-				4DF8D9361834CF4900D08356 /* APPTabBarController.m */,
+				4A2FE2E01838EBED007A3BCE /* APPEventsViewController.h */,
+				4A2FE2E11838EBED007A3BCE /* APPEventsViewController.m */,
+				4A2FE2E21838EBED007A3BCE /* APPEventViewController.h */,
+				4A2FE2E31838EBED007A3BCE /* APPEventViewController.m */,
+				4A2FE2E41838EBED007A3BCE /* APPMapViewController.h */,
+				4A2FE2E51838EBED007A3BCE /* APPMapViewController.m */,
+				4A2FE2E61838EBED007A3BCE /* APPTabBarController.h */,
+				4A2FE2E71838EBED007A3BCE /* APPTabBarController.m */,
 			);
 			name = Controllers;
 			path = "Single Event";
@@ -382,16 +382,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEAD231E180FCFE10023E7BB /* APPEventsViewController.m in Sources */,
 				4DF8D93018345F8600D08356 /* APPEvent.m in Sources */,
+				4A2FE2E81838EBED007A3BCE /* APPEventsViewController.m in Sources */,
 				4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */,
 				4DF8D92C183451E500D08356 /* APPMeetupOperationManager.m in Sources */,
 				BEAA7D3D180F4B8500276AA0 /* APPAppDelegate.m in Sources */,
+				4A2FE2E91838EBED007A3BCE /* APPEventViewController.m in Sources */,
 				4DF8D9331834721000D08356 /* APPVenue.m in Sources */,
-				BE9B25E4182554EA0093E2B4 /* APPEventViewController.m in Sources */,
+				4A2FE2EB1838EBED007A3BCE /* APPTabBarController.m in Sources */,
 				BEAA7D39180F4B8500276AA0 /* main.m in Sources */,
-				4DF8D9371834CF4900D08356 /* APPTabBarController.m in Sources */,
-				BE9B25E5182554EA0093E2B4 /* APPMapViewController.m in Sources */,
+				4A2FE2EA1838EBED007A3BCE /* APPMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

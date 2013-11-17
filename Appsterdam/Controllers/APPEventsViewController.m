@@ -1,25 +1,31 @@
-//
-//  APPEventsViewController.m
-//  Appsterdam
-//
-//  Created by Alessio Roberto on 17/10/13.
-//  Copyright (c) 2013 Alessio Roberto. All rights reserved.
-//
-
-// Contact roberto@veespo.com to download VeespoFramework
-//#import <VeespoFramework/Veespo.h>
-#import <AdSupport/AdSupport.h>
 #import "APPEventsViewController.h"
+
 #import "APPEventViewController.h"
 #import "APPMeetupOperationManager.h"
 #import "SVProgressHUD.h"
+#import <AdSupport/AdSupport.h>
+
+static NSString * const kAPPEventsShowDetailsSegueIdentifier = @"showDetails";
+static NSString * const kAPPEventsTalkLabTitle = @"TalkLab";
+static NSString * const kAPPEventsWeeklyBeerTitle = @"WeeklyBeer";
 
 @interface APPEventsViewController ()
-@property (nonatomic, strong) NSArray *events;
-@property (nonatomic, strong) NSArray *veespoTokens;
+
+@property (nonatomic, strong) NSArray *events, *veespoTokens;
+
 @end
 
 @implementation APPEventsViewController
+
+#pragma mark - UIViewController
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    APPEventViewController *eventViewController = [segue destinationViewController];
+    eventViewController.event = self.events[[self.tableView indexPathForSelectedRow].row];
+}
 
 - (void)viewDidLoad
 {
@@ -32,41 +38,12 @@
     [super viewWillAppear:animated];
     
     if (self.veespoTokens == nil) {
-//        NSString *userid = [NSString stringWithFormat:@"AppsterdamMilan-%@", [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]];
-//        NSArray *languageArray = [NSLocale preferredLanguages];
-        
-        // Contact roberto@veespo.com to download VeespoFramework
-        /*
-        [Veespo initVeespo:@"apk-189a5479-ee70-4dbe-9acf-16ed04947fad"
-                    userId:userid
-                  userName:nil
-                  language:[languageArray objectAtIndex:0]
-                categories:@{
-                             @"categories":@[
-                                     @{@"cat": @"eventi"}
-                                     ]
-                             }
-                   testUrl:YES
-                    tokens:^(id responseData, BOOL error) {
-                        self.veespoTokens = [[NSArray alloc] initWithArray:[responseData objectForKey:@"tokens"]];
-                    }];
-         */
+        // NOTE: Check soure controll for old code
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-#pragma mark - Table view data source
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    return [[self events] count];
-}
+#pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -81,21 +58,26 @@
     return cell;
 }
 
-#pragma mark - Events
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[self events] count];
+}
 
-// Could be done better if not using storyboard.
--(APPEventType)eventType
+
+#pragma mark - API
+
+- (APPEventType)eventType
 {
     APPEventType type = APPEventTypeOther;
-    if ([self.title isEqualToString:@"WeeklyBeer"]) {
+    if ([self.title isEqualToString:kAPPEventsWeeklyBeerTitle]) {
         type = APPEventTypeWeeklyBeer;
-    } else if ([self.title isEqualToString:@"TalkLab"]) {
+    } else if ([self.title isEqualToString:kAPPEventsTalkLabTitle]) {
         type = APPEventTypeTalkLab;
     }
     return type;
 }
 
--(void)reloadEvents
+- (void)reloadEvents
 {
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
     [APPMeetupOperationManager getAppsterdamMilanEventsWithType:[self eventType]
@@ -109,19 +91,5 @@
                                                          }
                                                      }];
 }
-     
-
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    APPEventViewController *eventViewController = [segue destinationViewController];
-    eventViewController.event = self.events[[self.tableView indexPathForSelectedRow].row];
-}
-
-
 
 @end
