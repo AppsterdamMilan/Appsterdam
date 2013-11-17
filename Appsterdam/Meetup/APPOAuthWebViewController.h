@@ -1,12 +1,3 @@
-//
-//  APPOAuthWebViewController.h
-//  Appsterdam
-//
-//  Created by Mouhcine El Amine on 11/11/13.
-//  Copyright (c) 2013 Alessio Roberto. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
 
 /**
  *  A block object to be executed when an APPMeetupAuthWebViewController gets redirected to its redirect uri.
@@ -26,13 +17,13 @@ typedef void(^APPMeetupAuthWebViewControllerRedirectUriBlock)(NSURL *url);
  *
  *  @return An initialized `APPMeetupAuthWebViewController` object or nil.
  */
--(instancetype)initWithRequest:(NSURLRequest *)request
+- (instancetype)initWithRequest:(NSURLRequest *)request
                    redirectUri:(NSString *)redirectUri
                     completion:(APPMeetupAuthWebViewControllerRedirectUriBlock)completion;
 
 /**
  *  Loads the OAuth request.
  */
--(void)loadAuthRequest;
+- (void)loadAuthRequest;
 
 @end

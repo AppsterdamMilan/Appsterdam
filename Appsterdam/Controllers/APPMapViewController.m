@@ -1,16 +1,14 @@
-//
-//  APPMapViewController.m
-//  Appsterdam
-//
-//  Created by Alessio Roberto on 20/10/13.
-//  Copyright (c) 2013 Alessio Roberto. All rights reserved.
-//
-
 #import "APPMapViewController.h"
 
-@interface APPMapViewController ()
+#import <CoreLocation/CoreLocation.h>
+
+@interface APPMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
+
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) MKMapView *mapView;
+
+- (void)setUpMap;
+
 @end
 
 @implementation APPMapViewController
@@ -33,9 +31,49 @@
     _locationManager = nil;
 }
 
-#pragma mark - Getters And Setters
+#pragma mark - CLLocationManagerDelegate
 
--(MKMapView *)mapView
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    [self setUpMap];
+}
+
+
+#pragma mark - MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)map viewForAnnotation:(id <MKAnnotation>)annotation{
+    if (annotation == map.userLocation)
+        return nil;
+    
+    static NSString *s = @"ann";
+    MKAnnotationView *pin = [map dequeueReusableAnnotationViewWithIdentifier:s];
+    if (!pin) {
+        pin = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:s];
+        pin.canShowCallout = YES;
+        pin.calloutOffset = CGPointZero;
+    }
+    return pin;
+}
+
+
+#pragma mark - API
+
+#pragma mark Properties
+
+- (CLLocationManager *)locationManager
+{
+    if (!_locationManager) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+        _locationManager.delegate = self;
+        _locationManager.distanceFilter = 200;
+    }
+    return _locationManager;
+}
+
+- (MKMapView *)mapView
 {
     if (!_mapView) {
         _mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
@@ -51,20 +89,10 @@
     return _mapView;
 }
 
--(CLLocationManager *)locationManager
-{
-    if (!_locationManager) {
-        _locationManager = [[CLLocationManager alloc] init];
-        _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
-        _locationManager.delegate = self;
-        _locationManager.distanceFilter = 200;
-    }
-    return _locationManager;
-}
 
-#pragma mark - Location and Map
+#pragma mark Methods
 
--(void)setupMap
+- (void)setUpMap
 {
     MKMapPoint annotationPoint = MKMapPointForCoordinate(self.mapView.userLocation.coordinate);
     MKMapRect zoomRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 3.5, 3.5);
@@ -76,27 +104,6 @@
     }
     [self.mapView setVisibleMapRect:zoomRect animated:YES];
     [self.locationManager stopUpdatingLocation];
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
-{
-    [self setupMap];
-}
-
-- (MKAnnotationView *)mapView:(MKMapView *)map viewForAnnotation:(id <MKAnnotation>)annotation{
-    if (annotation == map.userLocation)
-        return nil;
-    
-    static NSString *s = @"ann";
-    MKAnnotationView *pin = [map dequeueReusableAnnotationViewWithIdentifier:s];
-    if (!pin) {
-        pin = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:s];
-        pin.canShowCallout = YES;
-        pin.calloutOffset = CGPointZero;
-    }
-    return pin;
 }
 
 @end

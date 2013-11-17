@@ -1,14 +1,8 @@
-//
-//  APPMeetupOperationManager.m
-//  Appsterdam
-//
-//  Created by Mouhcine El Amine on 10/11/13.
-//  Copyright (c) 2013 Alessio Roberto. All rights reserved.
-//
-
 #import "APPMeetupOperationManager.h"
 
-// Created with Mouhcine's account (We need to dig and see if we can have one for Appsterdam)
+
+// FIXME: Contact @spllr for Appsterdam account details
+// FIXME: Move credentials to keys.plist file
 static NSString * const APPMeetupKey = @"ihjgomeoh5hu7rqcuplge9ik9";
 
 static NSString * const APPMeetupRedirectUri = @"appsterdam://oauth";
@@ -22,7 +16,9 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
 
 @implementation APPMeetupOperationManager
 
-+(instancetype)sharedInstance
+#pragma mark - Factories
+
++ (instancetype)sharedInstance
 {
     static APPMeetupOperationManager *_sharedInstance;
     static dispatch_once_t onceToken;
@@ -32,9 +28,11 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
     return _sharedInstance;
 }
 
-#pragma mark - Events
+#pragma mark - Class API
 
-+(void)getAppsterdamMilanEventsWithCompletion:(APPMeetupEventsHandler)completion
+#pragma mark Events
+
++ (void)getAppsterdamMilanEventsWithCompletion:(APPMeetupEventsHandler)completion
 {
     [[self sharedInstance] GET:@"2/events"
                     parameters:@{@"group_id": APPAppsterdamMilanMeetupID, @"page" : APPMeetupListPage}
@@ -55,8 +53,7 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
                        }];
 }
 
-+(void)getAppsterdamMilanEventsWithType:(APPEventType)type
-                             Completion:(APPMeetupEventsHandler)completion
++ (void)getAppsterdamMilanEventsWithType:(APPEventType)type completion:(APPMeetupEventsHandler)completion
 {
     [self getAppsterdamMilanEventsWithCompletion:^(NSArray *events, NSError *error) {
         if (completion) {
@@ -66,9 +63,10 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
     }];
 }
 
-#pragma mark - OAuth2
 
-+(void)authorizeWithCompletion:(APPMeetupRequestHandler)completion
+#pragma mark Authorization
+
++ (void)authorizeWithCompletion:(APPMeetupRequestHandler)completion
 {
     NSAssert([APPMeetupKey length] > 0, @"Missing Meetup key");
     UIViewController *rootViewController = [[UIApplication sharedApplication] delegate].window.rootViewController;
@@ -101,7 +99,7 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
                                    }];
 }
 
-+(NSURLRequest *)authRequest
++ (NSURLRequest *)authRequest
 {
     NSString *urlString = [NSString stringWithFormat:@"%@?client_id=%@&response_type=token&redirect_uri=%@",
                            APPMeetupOAuth2Url,
@@ -110,9 +108,10 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
     return [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
 }
 
-#pragma mark - Helper methods
 
-+(NSDictionary *)responseObjectFromRedirectURL:(NSURL *)url
+#pragma mark Helpers
+
++ (NSDictionary *)responseObjectFromRedirectURL:(NSURL *)url
 {
     NSString *form = [[[url absoluteString] lowercaseString] stringByReplacingOccurrencesOfString:[APPMeetupRedirectUri stringByAppendingString:@"?"]
                                                                                        withString:@""];

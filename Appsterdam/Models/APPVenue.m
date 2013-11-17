@@ -1,20 +1,16 @@
-//
-//  APPVenue.m
-//  Appsterdam
-//
-//  Created by Mouhcine El Amine on 14/11/13.
-//  Copyright (c) 2013 Alessio Roberto. All rights reserved.
-//
-
 #import "APPVenue.h"
 
 @interface APPVenue ()
+
 @property (nonatomic) CLLocationCoordinate2D coordinate;
+
 @end
 
 @implementation APPVenue
 
--(instancetype)initWithDictionary:(NSDictionary *)dictionary
+#pragma mark - Initializers
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     self = [super init];
     if (self) {
@@ -31,14 +27,15 @@
     return self;
 }
 
+
 #pragma mark - MKAnnotation
 
--(NSString *)title
+- (NSString *)title
 {
     return self.name;
 }
 
--(NSString *)subtitle
+- (NSString *)subtitle
 {
     return self.address;
 }

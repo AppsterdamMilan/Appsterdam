@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller - First-->
@@ -71,7 +71,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="u0V-yP-MbZ" detailTextLabel="H3Y-YP-rJ2" style="IBUITableViewCellStyleSubtitle" id="Sdq-Oa-ZXf">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sdq-Oa-ZXf" id="2rj-iV-hNg">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -94,7 +94,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7io-RV-INQ" kind="push" id="Hwj-kw-s9Z"/>
+                                    <segue destination="7io-RV-INQ" kind="push" identifier="showDetails" id="Hwj-kw-s9Z"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -115,7 +115,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="U8T-dz-Pks" detailTextLabel="6kL-bJ-JCi" style="IBUITableViewCellStyleSubtitle" id="wsw-8U-oUJ">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wsw-8U-oUJ" id="DJJ-ZN-DL1">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -138,7 +138,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7io-RV-INQ" kind="push" id="sR6-eT-Ryf"/>
+                                    <segue destination="7io-RV-INQ" kind="push" identifier="showDetails" id="sR6-eT-Ryf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -191,7 +191,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="zzs-kD-ZdO" detailTextLabel="8JZ-ec-txt" style="IBUITableViewCellStyleSubtitle" id="Slb-aj-tEX">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Slb-aj-tEX" id="R4u-Sb-3KU">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -214,7 +214,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7io-RV-INQ" kind="push" id="YSY-jh-IjU"/>
+                                    <segue destination="7io-RV-INQ" kind="push" identifier="showDetails" id="YSY-jh-IjU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -281,8 +281,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descriptionWV" destination="1Pu-sk-sgO" id="2mJ-rK-WZC"/>
-                        <outlet property="directionBtn" destination="mg1-MS-pfl" id="vAO-EL-V6a"/>
+                        <outlet property="descriptionWebView" destination="1Pu-sk-sgO" id="yBF-6x-PV2"/>
+                        <outlet property="directionButton" destination="mg1-MS-pfl" id="par-gX-ohY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKu-Ec-EkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,6 +343,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sR6-eT-Ryf"/>
+        <segue reference="Hwj-kw-s9Z"/>
     </inferredMetricsTieBreakers>
 </document>

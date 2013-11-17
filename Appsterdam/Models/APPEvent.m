@@ -1,20 +1,18 @@
-//
-//  APPEvent.m
-//  Appsterdam
-//
-//  Created by Mouhcine El Amine on 14/11/13.
-//  Copyright (c) 2013 Alessio Roberto. All rights reserved.
-//
-
 #import "APPEvent.h"
 
+#import "APPVenue.h"
+
 @interface APPEvent ()
+
 @property (nonatomic, strong) NSString *eventStatus;
+
 @end
 
 @implementation APPEvent
 
--(instancetype)initWithDictionary:(NSDictionary *)dictionary
+#pragma mark - Initializers
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     self = [super init];
     if (self) {
@@ -35,7 +33,22 @@
     return self;
 }
 
--(APPEventStatus)status
+
+#pragma mark - API
+
+#pragma mark Properties
+
+- (BOOL)isTalkLabEvent
+{
+    return [self type] == APPEventTypeTalkLab;
+}
+
+- (BOOL)isWeeklyBeerEvent
+{
+    return [self type] == APPEventTypeWeeklyBeer;
+}
+
+- (APPEventStatus)status
 {
     APPEventStatus result = APPEventStatusUnknown;
     if ([self.eventStatus isEqualToString:@"cancelled"]) {
@@ -54,7 +67,7 @@
     return result;
 }
 
--(APPEventType)type
+- (APPEventType)type
 {
     APPEventType result = APPEventTypeOther;
     if ([self.name isEqualToString:@"Appsterdam Weekly Beer"]) {
@@ -63,16 +76,6 @@
         result = APPEventTypeTalkLab;
     }
     return result;
-}
-
--(BOOL)isWeeklyBeerEvent
-{
-    return [self type] == APPEventTypeWeeklyBeer;
-}
-
--(BOOL)isTalkLabEvent
-{
-    return [self type] == APPEventTypeTalkLab;
 }
 
 @end

@@ -1,10 +1,3 @@
-//
-//  APPMeetupOperationManager.h
-//  Appsterdam
-//
-//  Created by Mouhcine El Amine on 10/11/13.
-//  Copyright (c) 2013 Alessio Roberto. All rights reserved.
-//
 
 #import "AFNetworking.h"
 #import "APPOAuthWebViewController.h"
@@ -33,7 +26,7 @@ typedef void (^APPMeetupEventsHandler) (NSArray *events, NSError *error);
  *
  *  @return The shared instance or nil.
  */
-+(instancetype)sharedInstance;
++ (instancetype)sharedInstance;
 
 #pragma mark - OAuth
 
@@ -43,7 +36,7 @@ typedef void (^APPMeetupEventsHandler) (NSArray *events, NSError *error);
  *  @param completion A block to be executed when the authorization finishes.
  *  @discussion This class method present a web view controller. It must not be called before the root view controller is on screen, if so it will raise an exception.
  */
-+(void)authorizeWithCompletion:(APPMeetupRequestHandler)completion;
++ (void)authorizeWithCompletion:(APPMeetupRequestHandler)completion;
 
 #pragma mark - Events
 
@@ -52,7 +45,7 @@ typedef void (^APPMeetupEventsHandler) (NSArray *events, NSError *error);
  *
  *  @param completion A block to be executed when the request finishes.
  */
-+(void)getAppsterdamMilanEventsWithCompletion:(APPMeetupEventsHandler)completion;
++ (void)getAppsterdamMilanEventsWithCompletion:(APPMeetupEventsHandler)completion;
 
 /**
  *  Makes a request for events of a certain type scheduled in Appsterdam Milan Meetup group.
@@ -60,7 +53,6 @@ typedef void (^APPMeetupEventsHandler) (NSArray *events, NSError *error);
  *  @param type       An event type.
  *  @param completion A block to be executed when the request finishes.
  */
-+(void)getAppsterdamMilanEventsWithType:(APPEventType)type
-                             Completion:(APPMeetupEventsHandler)completion;
++ (void)getAppsterdamMilanEventsWithType:(APPEventType)type completion:(APPMeetupEventsHandler)completion;
 
 @end
