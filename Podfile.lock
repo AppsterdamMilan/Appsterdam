@@ -19,14 +19,17 @@ PODS:
   - AFNetworking/Serialization (2.0.2)
   - AFNetworking/UIKit (2.0.2):
     - AFNetworking/NSURLConnection
+  - HockeySDK (3.5.0)
   - SVProgressHUD (1.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - HockeySDK
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 22de50ae71ab1c4859773f61068d6fcd1d8f9a4d
+  HockeySDK: 685e6ca0b78668ef8b595fba17fe087ea6074b05
   SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
 
-COCOAPODS: 0.26.2
+COCOAPODS: 0.27.1
