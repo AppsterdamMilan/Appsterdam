@@ -52,22 +52,22 @@
 		4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPOAuthWebViewController.m; sourceTree = "<group>"; };
 		4DF8D929183451E500D08356 /* APPMeetupOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPMeetupOperationManager.h; sourceTree = "<group>"; };
 		4DF8D92A183451E500D08356 /* APPMeetupOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPMeetupOperationManager.m; sourceTree = "<group>"; };
-		4DF8D92E18345F8600D08356 /* APPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEvent.h; path = "/Users/klaas/Documents/spllr/appsterdam/Appsterdam-APp/Appsterdam/Model/APPEvent.h"; sourceTree = "<absolute>"; };
-		4DF8D92F18345F8600D08356 /* APPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEvent.m; path = "/Users/klaas/Documents/spllr/appsterdam/Appsterdam-APp/Appsterdam/Model/APPEvent.m"; sourceTree = "<absolute>"; };
+		4DF8D92E18345F8600D08356 /* APPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEvent.h; path = "/Users/klaas/Documents/spllr/appsterdam/Appsterdam-APp/Appsterdam/Models/APPEvent.h"; sourceTree = "<absolute>"; };
+		4DF8D92F18345F8600D08356 /* APPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEvent.m; path = "/Users/klaas/Documents/spllr/appsterdam/Appsterdam-APp/Appsterdam/Models/APPEvent.m"; sourceTree = "<absolute>"; };
 		4DF8D9311834721000D08356 /* APPVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPVenue.h; sourceTree = "<group>"; };
 		4DF8D9321834721000D08356 /* APPVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPVenue.m; sourceTree = "<group>"; };
-		4DF8D9351834CF4900D08356 /* APPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPTabBarController.h; sourceTree = "<group>"; };
-		4DF8D9361834CF4900D08356 /* APPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPTabBarController.m; sourceTree = "<group>"; };
+		4DF8D9351834CF4900D08356 /* APPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPTabBarController.h; path = ../Controllers/APPTabBarController.h; sourceTree = "<group>"; };
+		4DF8D9361834CF4900D08356 /* APPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPTabBarController.m; path = ../Controllers/APPTabBarController.m; sourceTree = "<group>"; };
 		6D28F6CEF3E449AB968E2CE5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8DB5738C4CC14BC6BD0A1C59 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE186CBD182430B6009AA87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		BE9964651824071800A9652C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BE99646D18240A4E00A9652C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BE99646F18240A5400A9652C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		BE9B25E0182554EA0093E2B4 /* APPEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPEventViewController.h; sourceTree = "<group>"; };
-		BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPEventViewController.m; sourceTree = "<group>"; };
-		BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPMapViewController.h; sourceTree = "<group>"; };
-		BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPMapViewController.m; sourceTree = "<group>"; };
+		BE9B25E0182554EA0093E2B4 /* APPEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEventViewController.h; path = ../Controllers/APPEventViewController.h; sourceTree = "<group>"; };
+		BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEventViewController.m; path = ../Controllers/APPEventViewController.m; sourceTree = "<group>"; };
+		BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPMapViewController.h; path = ../Controllers/APPMapViewController.h; sourceTree = "<group>"; };
+		BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPMapViewController.m; path = ../Controllers/APPMapViewController.m; sourceTree = "<group>"; };
 		BEAA7D29180F4B8500276AA0 /* Appsterdam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appsterdam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA7D2C180F4B8500276AA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEAA7D2E180F4B8500276AA0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -145,7 +145,7 @@
 			path = Meetup;
 			sourceTree = "<group>";
 		};
-		4DF8D92D18345F5200D08356 /* Model */ = {
+		4DF8D92D18345F5200D08356 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4DF8D92E18345F8600D08356 /* APPEvent.h */,
@@ -153,26 +153,20 @@
 				4DF8D9311834721000D08356 /* APPVenue.h */,
 				4DF8D9321834721000D08356 /* APPVenue.m */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		4DF8D9341834CF2000D08356 /* Tab Bar Controller */ = {
+		BE9B25DF182554EA0093E2B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				4DF8D9351834CF4900D08356 /* APPTabBarController.h */,
 				4DF8D9361834CF4900D08356 /* APPTabBarController.m */,
-			);
-			path = "Tab Bar Controller";
-			sourceTree = "<group>";
-		};
-		BE9B25DF182554EA0093E2B4 /* Single Event */ = {
-			isa = PBXGroup;
-			children = (
 				BE9B25E0182554EA0093E2B4 /* APPEventViewController.h */,
 				BE9B25E1182554EA0093E2B4 /* APPEventViewController.m */,
 				BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */,
 				BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */,
 			);
+			name = Controllers;
 			path = "Single Event";
 			sourceTree = "<group>";
 		};
@@ -217,11 +211,10 @@
 			isa = PBXGroup;
 			children = (
 				4A33B3A11838E64C00AEFE26 /* Application */,
+				BE9B25DF182554EA0093E2B4 /* Controllers */,
 				4DF8D926183451E500D08356 /* Meetup */,
-				4DF8D92D18345F5200D08356 /* Model */,
-				BE9B25DF182554EA0093E2B4 /* Single Event */,
+				4DF8D92D18345F5200D08356 /* Models */,
 				BEAA7D33180F4B8500276AA0 /* Supporting Files */,
-				4DF8D9341834CF2000D08356 /* Tab Bar Controller */,
 			);
 			path = Appsterdam;
 			sourceTree = "<group>";
