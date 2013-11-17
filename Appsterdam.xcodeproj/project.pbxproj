@@ -52,12 +52,12 @@
 		4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPOAuthWebViewController.m; sourceTree = "<group>"; };
 		4DF8D929183451E500D08356 /* APPMeetupOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPMeetupOperationManager.h; sourceTree = "<group>"; };
 		4DF8D92A183451E500D08356 /* APPMeetupOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPMeetupOperationManager.m; sourceTree = "<group>"; };
-		4DF8D92E18345F8600D08356 /* APPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEvent.h; path = Classes/Model/APPEvent.h; sourceTree = "<group>"; };
-		4DF8D92F18345F8600D08356 /* APPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEvent.m; path = Classes/Model/APPEvent.m; sourceTree = "<group>"; };
-		4DF8D9311834721000D08356 /* APPVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPVenue.h; path = Classes/Model/APPVenue.h; sourceTree = "<group>"; };
-		4DF8D9321834721000D08356 /* APPVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPVenue.m; path = Classes/Model/APPVenue.m; sourceTree = "<group>"; };
-		4DF8D9351834CF4900D08356 /* APPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPTabBarController.h; path = "Classes/Tab Bar Controller/APPTabBarController.h"; sourceTree = "<group>"; };
-		4DF8D9361834CF4900D08356 /* APPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPTabBarController.m; path = "Classes/Tab Bar Controller/APPTabBarController.m"; sourceTree = "<group>"; };
+		4DF8D92E18345F8600D08356 /* APPEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPEvent.h; path = "/Users/klaas/Documents/spllr/appsterdam/Appsterdam-APp/Appsterdam/Model/APPEvent.h"; sourceTree = "<absolute>"; };
+		4DF8D92F18345F8600D08356 /* APPEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPEvent.m; path = "/Users/klaas/Documents/spllr/appsterdam/Appsterdam-APp/Appsterdam/Model/APPEvent.m"; sourceTree = "<absolute>"; };
+		4DF8D9311834721000D08356 /* APPVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPVenue.h; sourceTree = "<group>"; };
+		4DF8D9321834721000D08356 /* APPVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPVenue.m; sourceTree = "<group>"; };
+		4DF8D9351834CF4900D08356 /* APPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPTabBarController.h; sourceTree = "<group>"; };
+		4DF8D9361834CF4900D08356 /* APPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPTabBarController.m; sourceTree = "<group>"; };
 		6D28F6CEF3E449AB968E2CE5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8DB5738C4CC14BC6BD0A1C59 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE186CBD182430B6009AA87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 		BEAA7D36180F4B8500276AA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEAA7D38180F4B8500276AA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BEAA7D3A180F4B8500276AA0 /* Appsterdam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Appsterdam-Prefix.pch"; sourceTree = "<group>"; };
-		BEAA7D3B180F4B8500276AA0 /* APPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPAppDelegate.h; sourceTree = "<group>"; };
-		BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPAppDelegate.m; sourceTree = "<group>"; };
+		BEAA7D3B180F4B8500276AA0 /* APPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = APPAppDelegate.h; path = Application/APPAppDelegate.h; sourceTree = "<group>"; };
+		BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = APPAppDelegate.m; path = Application/APPAppDelegate.m; sourceTree = "<group>"; };
 		BEAA7D3F180F4B8500276AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEAA7D47180F4B8500276AA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BEAA7D4D180F4B8500276AA0 /* AppsterdamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppsterdamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +121,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A33B3A11838E64C00AEFE26 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BEAA7D3B180F4B8500276AA0 /* APPAppDelegate.h */,
+				BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */,
+				BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */,
+				BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */,
+				BEAA7D3E180F4B8500276AA0 /* Main.storyboard */,
+				BEAA7D47180F4B8500276AA0 /* Images.xcassets */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
 		4DF8D926183451E500D08356 /* Meetup */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +153,7 @@
 				4DF8D9311834721000D08356 /* APPVenue.h */,
 				4DF8D9321834721000D08356 /* APPVenue.m */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4DF8D9341834CF2000D08356 /* Tab Bar Controller */ = {
@@ -149,7 +162,7 @@
 				4DF8D9351834CF4900D08356 /* APPTabBarController.h */,
 				4DF8D9361834CF4900D08356 /* APPTabBarController.m */,
 			);
-			name = "Tab Bar Controller";
+			path = "Tab Bar Controller";
 			sourceTree = "<group>";
 		};
 		BE9B25DF182554EA0093E2B4 /* Single Event */ = {
@@ -160,8 +173,7 @@
 				BE9B25E2182554EA0093E2B4 /* APPMapViewController.h */,
 				BE9B25E3182554EA0093E2B4 /* APPMapViewController.m */,
 			);
-			name = "Single Event";
-			path = "Classes/Single Event";
+			path = "Single Event";
 			sourceTree = "<group>";
 		};
 		BEAA7D20180F4B8500276AA0 = {
@@ -204,14 +216,12 @@
 		BEAA7D32180F4B8500276AA0 /* Appsterdam */ = {
 			isa = PBXGroup;
 			children = (
-				BEAA7D3B180F4B8500276AA0 /* APPAppDelegate.h */,
-				BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */,
-				BEAD231C180FCFE10023E7BB /* APPEventsViewController.h */,
-				BEAD231D180FCFE10023E7BB /* APPEventsViewController.m */,
-				BEAA7D3E180F4B8500276AA0 /* Main.storyboard */,
-				BEAA7D47180F4B8500276AA0 /* Images.xcassets */,
+				4A33B3A11838E64C00AEFE26 /* Application */,
+				4DF8D926183451E500D08356 /* Meetup */,
+				4DF8D92D18345F5200D08356 /* Model */,
+				BE9B25DF182554EA0093E2B4 /* Single Event */,
 				BEAA7D33180F4B8500276AA0 /* Supporting Files */,
-				BEAD2318180FCE4D0023E7BB /* Classes */,
+				4DF8D9341834CF2000D08356 /* Tab Bar Controller */,
 			);
 			path = Appsterdam;
 			sourceTree = "<group>";
@@ -243,17 +253,6 @@
 				BEAA7D57180F4B8500276AA0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BEAD2318180FCE4D0023E7BB /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				4DF8D9341834CF2000D08356 /* Tab Bar Controller */,
-				4DF8D92D18345F5200D08356 /* Model */,
-				4DF8D926183451E500D08356 /* Meetup */,
-				BE9B25DF182554EA0093E2B4 /* Single Event */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
