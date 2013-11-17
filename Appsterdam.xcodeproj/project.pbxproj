@@ -76,10 +76,10 @@
 		BEAA7D2C180F4B8500276AA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEAA7D2E180F4B8500276AA0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BEAA7D30180F4B8500276AA0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		BEAA7D34180F4B8500276AA0 /* Appsterdam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Appsterdam-Info.plist"; sourceTree = "<group>"; };
+		BEAA7D34180F4B8500276AA0 /* Appsterdam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Appsterdam-Info.plist"; path = "Supporting Files/Appsterdam-Info.plist"; sourceTree = "<group>"; };
 		BEAA7D36180F4B8500276AA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BEAA7D38180F4B8500276AA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BEAA7D3A180F4B8500276AA0 /* Appsterdam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Appsterdam-Prefix.pch"; sourceTree = "<group>"; };
+		BEAA7D38180F4B8500276AA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
+		BEAA7D3A180F4B8500276AA0 /* Appsterdam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Appsterdam-Prefix.pch"; path = "Supporting Files/Appsterdam-Prefix.pch"; sourceTree = "<group>"; };
 		BEAA7D3B180F4B8500276AA0 /* APPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = APPAppDelegate.h; path = Application/APPAppDelegate.h; sourceTree = "<group>"; };
 		BEAA7D3C180F4B8500276AA0 /* APPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = APPAppDelegate.m; path = Application/APPAppDelegate.m; sourceTree = "<group>"; };
 		BEAA7D3F180F4B8500276AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
