@@ -18,6 +18,8 @@
 		4DF8D92B183451E500D08356 /* APPOAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D928183451E500D08356 /* APPOAuthWebViewController.m */; };
 		4DF8D92C183451E500D08356 /* APPMeetupOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D92A183451E500D08356 /* APPMeetupOperationManager.m */; };
 		4DF8D9331834721000D08356 /* APPVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8D9321834721000D08356 /* APPVenue.m */; };
+		BE81B146183AD5C400F5D665 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE81B142183AD5C400F5D665 /* libTestFlight.a */; };
+		BE81B148183AD5DE00F5D665 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE81B147183AD5DE00F5D665 /* libz.dylib */; };
 		BE9964661824071800A9652C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9964651824071800A9652C /* AdSupport.framework */; };
 		BE99647018240A5400A9652C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE99646F18240A5400A9652C /* QuartzCore.framework */; };
 		BEAA7D2D180F4B8500276AA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA7D2C180F4B8500276AA0 /* Foundation.framework */; };
@@ -66,6 +68,11 @@
 		6D28F6CEF3E449AB968E2CE5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8DB5738C4CC14BC6BD0A1C59 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE186CBD182430B6009AA87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		BE81B142183AD5C400F5D665 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		BE81B143183AD5C400F5D665 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		BE81B144183AD5C400F5D665 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		BE81B145183AD5C400F5D665 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		BE81B147183AD5DE00F5D665 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BE9964651824071800A9652C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BE99646D18240A4E00A9652C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BE99646F18240A5400A9652C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -99,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE81B148183AD5DE00F5D665 /* libz.dylib in Frameworks */,
+				BE81B146183AD5C400F5D665 /* libTestFlight.a in Frameworks */,
 				4D97ABBC182F9A31009CCBF2 /* MobileCoreServices.framework in Frameworks */,
 				4D97ABBB182F9A2A009CCBF2 /* SystemConfiguration.framework in Frameworks */,
 				BE99647018240A5400A9652C /* QuartzCore.framework in Frameworks */,
@@ -156,6 +165,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BE81B141183AD5C400F5D665 /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				BE81B142183AD5C400F5D665 /* libTestFlight.a */,
+				BE81B143183AD5C400F5D665 /* TestFlight+AsyncLogging.h */,
+				BE81B144183AD5C400F5D665 /* TestFlight+ManualSessions.h */,
+				BE81B145183AD5C400F5D665 /* TestFlight.h */,
+			);
+			path = TestFlight;
+			sourceTree = "<group>";
+		};
 		BE9B25DF182554EA0093E2B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +215,7 @@
 		BEAA7D2B180F4B8500276AA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE81B147183AD5DE00F5D665 /* libz.dylib */,
 				4D97F205182F99CC0027291C /* MobileCoreServices.framework */,
 				4D97F203182F99200027291C /* Security.framework */,
 				BE99646F18240A5400A9652C /* QuartzCore.framework */,
@@ -216,6 +237,7 @@
 				BE9B25DF182554EA0093E2B4 /* Controllers */,
 				4DF8D926183451E500D08356 /* Meetup */,
 				4DF8D92D18345F5200D08356 /* Models */,
+				BE81B141183AD5C400F5D665 /* TestFlight */,
 				BEAA7D33180F4B8500276AA0 /* Supporting Files */,
 			);
 			path = Appsterdam;
@@ -532,7 +554,12 @@
 				GCC_PREFIX_HEADER = "Appsterdam/Supporting Files/Appsterdam-Prefix.pch";
 				INFOPLIST_FILE = "Appsterdam/Supporting Files/Appsterdam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/MyPassport/Dropbox/Progetti/Appsterdam/Appsterdam/TestFlight,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "41EECC4E-7EFF-480C-8326-3953E39C5DE7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -543,12 +570,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Appsterdam/Supporting Files/Appsterdam-Prefix.pch";
 				INFOPLIST_FILE = "Appsterdam/Supporting Files/Appsterdam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/MyPassport/Dropbox/Progetti/Appsterdam/Appsterdam/TestFlight,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "41EECC4E-7EFF-480C-8326-3953E39C5DE7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

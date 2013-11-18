@@ -1,9 +1,11 @@
 #import "APPAppDelegate.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
+#import "TestFlight.h"
 #import <HockeySDK/HockeySDK.h>
 
 static NSString * const kAPPHockeyAppIdentifierKey = @"HockeyApp Identifier";
+static NSString * const kAPPTestFlightKey = @"TestFlightKey";
 static NSString * const kAPPKeysFileName = @"Appsterdam-Keys";
 
 @interface APPAppDelegate () <BITHockeyManagerDelegate>
@@ -17,6 +19,7 @@ static NSString * const kAPPKeysFileName = @"Appsterdam-Keys";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self setUpHockeyApp];
+    [self takeOffTestFlight];
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     return YES;
 }
@@ -39,6 +42,18 @@ static NSString * const kAPPKeysFileName = @"Appsterdam-Keys";
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:appIdentifier delegate:self];
     [[BITHockeyManager sharedHockeyManager] startManager];
 #endif
+}
+
+- (void)takeOffTestFlight
+{
+    NSString *keysPath = [[NSBundle mainBundle] pathForResource:kAPPKeysFileName ofType:@"plist"];
+    if (!keysPath) {
+        NSLog(@"To use TestFlight make sure you have a Appsterdam-Keys.plist with the Identifier in your project");
+        return;
+    }
+    
+    NSDictionary *keys = [NSDictionary dictionaryWithContentsOfFile:keysPath];
+    [TestFlight takeOff:keys[kAPPTestFlightKey]];
 }
 
 @end
