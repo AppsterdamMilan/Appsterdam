@@ -323,6 +323,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Alessio Roberto";
 				TargetAttributes = {
+					BEAA7D28180F4B8500276AA0 = {
+						DevelopmentTeam = GK5S624D99;
+					};
 					BEAA7D4C180F4B8500276AA0 = {
 						TestTargetID = BEAA7D28180F4B8500276AA0;
 					};
@@ -549,6 +552,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Appsterdam/Supporting Files/Appsterdam-Prefix.pch";
@@ -559,7 +564,7 @@
 					/Volumes/MyPassport/Dropbox/Progetti/Appsterdam/Appsterdam/TestFlight,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "41EECC4E-7EFF-480C-8326-3953E39C5DE7";
+				PROVISIONING_PROFILE = "17B8B7FB-9B7A-4919-B988-7E7DC2E9831D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -570,6 +575,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -581,7 +587,7 @@
 					/Volumes/MyPassport/Dropbox/Progetti/Appsterdam/Appsterdam/TestFlight,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "41EECC4E-7EFF-480C-8326-3953E39C5DE7";
+				PROVISIONING_PROFILE = "17B8B7FB-9B7A-4919-B988-7E7DC2E9831D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

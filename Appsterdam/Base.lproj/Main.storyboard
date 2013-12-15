@@ -241,16 +241,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg1-MS-pfl">
-                                <rect key="frame" x="113" y="362" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Where we are">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="openMapViewController:" destination="7io-RV-INQ" eventType="touchUpInside" id="k8k-7D-kpx"/>
-                                </connections>
-                            </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-sk-sgO">
                                 <rect key="frame" x="20" y="64" width="280" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -262,19 +252,29 @@
                                     <outlet property="delegate" destination="7io-RV-INQ" id="iM5-Sz-z42"/>
                                 </connections>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbC-Jn-Ytf">
+                                <rect key="frame" x="117" y="358" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Where we're">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMapViewController:" destination="7io-RV-INQ" eventType="touchUpInside" id="ufZ-2H-pzh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="0.010851006337158076" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mg1-MS-pfl" firstAttribute="centerX" secondItem="1Pu-sk-sgO" secondAttribute="centerX" id="3Zm-zT-RaO"/>
-                            <constraint firstItem="mg1-MS-pfl" firstAttribute="top" secondItem="1Pu-sk-sgO" secondAttribute="bottom" constant="59" id="5hK-JQ-iA7"/>
+                            <constraint firstItem="RbC-Jn-Ytf" firstAttribute="top" secondItem="1Pu-sk-sgO" secondAttribute="bottom" constant="55" id="7DJ-XO-LYU"/>
                             <constraint firstAttribute="trailing" secondItem="1Pu-sk-sgO" secondAttribute="trailing" constant="20" symbolic="YES" id="Crm-Gc-nE0"/>
+                            <constraint firstItem="RbC-Jn-Ytf" firstAttribute="centerX" secondItem="1Pu-sk-sgO" secondAttribute="centerX" id="VV1-Rf-YTe"/>
                             <constraint firstItem="1Pu-sk-sgO" firstAttribute="top" secondItem="E74-DO-jxs" secondAttribute="bottom" id="YLc-Cb-Eeo"/>
                             <constraint firstItem="1Pu-sk-sgO" firstAttribute="leading" secondItem="Vxj-5b-IdX" secondAttribute="leading" constant="20" symbolic="YES" id="c1W-vp-4ii"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YgN-kn-VqX">
-                        <barButtonItem key="rightBarButtonItem" title="Feedback" id="DS4-4T-zfu">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Feedback" id="DS4-4T-zfu">
                             <connections>
                                 <action selector="openVeespo:" destination="7io-RV-INQ" id="Iut-01-2QY"/>
                             </connections>
@@ -282,7 +282,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionWebView" destination="1Pu-sk-sgO" id="yBF-6x-PV2"/>
-                        <outlet property="directionButton" destination="mg1-MS-pfl" id="pck-14-tXm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKu-Ec-EkH" userLabel="First Responder" sceneMemberID="firstResponder"/>

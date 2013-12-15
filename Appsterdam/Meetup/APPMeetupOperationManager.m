@@ -42,6 +42,8 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
     NSDictionary *keys = [NSDictionary dictionaryWithContentsOfFile:keysPath];
     NSString *appsterdamMilanMeetupID = keys[kAPPAppsterdamMilanMeetupID];
     
+    NSAssert([appsterdamMilanMeetupID length] > 0, @"Missing Meetup group ID");
+    
     [[self sharedInstance] GET:@"2/events"
                     parameters:@{@"group_id": appsterdamMilanMeetupID, @"page" : APPMeetupListPage}
                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -78,9 +80,8 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
 {
     NSString *keysPath = [[NSBundle mainBundle] pathForResource:kAPPKeysFileName ofType:@"plist"];
     NSDictionary *keys = [NSDictionary dictionaryWithContentsOfFile:keysPath];
-    NSString *meetupKey = keys[kAPPMeetupKey];
     
-    NSAssert([meetupKey length] > 0, @"Missing Meetup key");
+    NSAssert([keys[kAPPMeetupKey] length] > 0, @"Missing Meetup key");
     UIViewController *rootViewController = [[UIApplication sharedApplication] delegate].window.rootViewController;
     NSAssert(rootViewController.view.window, @"Authorization can be started only after the root view controller is on screen");
     
@@ -116,6 +117,7 @@ static NSString * const APPMeetupErrorDomain = @"APPMeetupErrorDomain";
     NSString *keysPath = [[NSBundle mainBundle] pathForResource:kAPPKeysFileName ofType:@"plist"];
     NSDictionary *keys = [NSDictionary dictionaryWithContentsOfFile:keysPath];
     
+    NSAssert([keys[kAPPMeetupKey] length] > 0, @"Missing Meetup key");
     NSString *urlString = [NSString stringWithFormat:@"%@?client_id=%@&response_type=token&redirect_uri=%@",
                            APPMeetupOAuth2Url,
                            keys[kAPPMeetupKey],

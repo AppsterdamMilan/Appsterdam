@@ -23,6 +23,12 @@
     [self.view addSubview:self.mapView];
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [_locationManager stopUpdatingLocation];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -95,15 +101,14 @@
 - (void)setUpMap
 {
     MKMapPoint annotationPoint = MKMapPointForCoordinate(self.mapView.userLocation.coordinate);
-    MKMapRect zoomRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 3.5, 3.5);
+    MKMapRect zoomRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 5.0, 5.0);
     for (id <MKAnnotation> annotation in self.mapView.annotations)
     {
         MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
-        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 4.0, 4.0);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 5.0, 5.0);
         zoomRect = MKMapRectUnion(zoomRect, pointRect);
     }
     [self.mapView setVisibleMapRect:zoomRect animated:YES];
-    [self.locationManager stopUpdatingLocation];
 }
 
 @end
